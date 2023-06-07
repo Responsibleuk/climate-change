@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Page Title -->
+    <title>Anita | Creative Photography</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600;800&family=Rajdhani:wght@700&family=Roboto+Mono&display=swap" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="../css/config.css">
+    <link type="text/css" rel="stylesheet" href="../css/anita.css">
+
+    <!-- Favicon -->
+    <link rel="icon" href="../img/favicon.png" sizes="32x32" />
+</head>
+<body data-barba="wrapper">
+    <!-- Navigation -->
+    <div class="anita-navigation-wrap">
+        <nav class="anita-nav">
+            <ul class="anita-menu">
+                <li>
+                    <a href="../index.html"><sup>01</sup> Welcome</a>
+                </li>
+                <li>
+                    <a href="overview.html"><sup>02</sup> Overview</a>
+                </li>
+                <li>
+                    <a href="structure.html"><sup>03</sup> HTML Structure</a>
+                </li>
+                <li>
+                    <a href="header.html"><sup>04</sup> Header and Menu</a>
+                </li>
+                <li>
+                    <a href="footer.html"><sup>05</sup> Footer and Socials</a>
+                </li>
+                <li>
+                    <a href="options.html"><sup>06</sup> Options and Settings</a>
+                </li>
+                <li>
+                    <a href="content.html"><sup>07</sup> Content and Grid</a>
+                </li>
+                <li>
+                    <a href="elements.html"><sup>08</sup> Content Elements</a>
+                </li>
+                <li>
+                    <a href="listing.html"><sup>09</sup> Albums Listing</a>
+                </li>
+                <li>
+                    <a href="albums.html"><sup>10</sup> Album Posts</a>
+                </li>
+                <li>
+                    <a href="contact.html"><sup>11</sup> Contact Form</a>
+                </li>
+                <li class="is-active">
+                    <a href="customize.html"><sup>12</sup> Style Customization</a>
+                </li>
+                <li>
+                    <a href="credits.html"><sup>13</sup> Credits</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    
+    <main data-barba="container" data-barba-namespace="intro">
+        <!-- Content -->
+        <div class="anita-container">
+            <!-- SECTION: Style Customization -->
+            <section>
+                <div class="grid grid--33-66 bottom-gap--s">
+                    <div>
+                        <h2><sup>12.</sup> CSS Customization</h2>
+                    </div>
+                    <div>
+                        In our theme, we use <span class="anita-highlight">CSS variables</span> to quickly and easily change the look and feel of the website. You can find the CSS config in the file <span class="anita-highlight">css/config.css</span>. Let's take a closer look at all these features.
+                    </div>
+                </div><!-- .grid -->
+
+<!-- Base Color Scheme -->
+                <p>At the beginning of the <span class="anita-highlight">css/config.css</span> file, you can adjust the base color scheme variables to change the color scheme of your website quickly. These colors are reused in the following configuration sections.</p>
+                <!-- CODE EXAMPLE -->
+<pre class="chl chl-css bottom-gap--m"><span class="chl-comment">*
+* Author: Shadow Themes
+* Author URL: https://shadow-themes.com
+</span>
+<sel>:root</sel> {
+    <span class="chl-comment"> ============
+       COLOR SCHEME
+       ============ </span>
+    
+    <span class="chl-comment"> --- BASE COLORS --- </span>
+
+    <span class="chl-comment"> Body Background Color </span>
+    <attr>--anita-s-bg-body: #0E0E10</attr>;
+
+    <span class="chl-comment"> Headings and Accents Color </span>
+    <attr>--anita-s-bg-body: #E6E6E6</attr>;
+
+    <span class="chl-comment"> Content Text color. Also is used for Input borders and Text </span>
+    <attr>--anita-s-bg-body: #A6A6A6</attr>;
+
+    <span class="chl-comment"> Meta Text Color </span>
+    <attr>--anita-s-bg-body: #E6E6E6C0</attr>;
+
+    <span class="chl-comment"> Background Color for Containers and Sub-menus </span>
+    <attr>--anita-s-bg-body: #212224</attr>;
+    
+    ...
+}</pre>
+                <!-- // CODE EXAMPLE -->
+
+<!-- Additional Color Options -->
+                <h6>Additional Color Options</h6>
+                <p>If you want to make more precise adjustments, let's see what color options we have for this purpose.</p>
+<!-- CODE EXAMPLE -->
+<pre class="chl chl-css">
+...
+<sel>:root</sel> {
+    ...
+
+    <span class="chl-comment"> --- UI ELEMENTS --- </span>
+
+    <span class="chl-comment"> Spotlight Top Gradient </span>
+    <attr>--anita-s-spotlight01: radial-gradient(circle, #84ABD5 0%, #84ABD500) no-repeat center center</attr>;
+
+    <span class="chl-comment"> Spotlight Bottom Gradient </span>
+    <attr>--anita-s-spotlight02: radial-gradient(circle, #FFEBD3 0%, #FFEBD300) no-repeat center center</attr>;
+
+    <span class="chl-comment"> Carousel Gradient Overlay gradient </span>
+    <attr>--anita-s-overlay-gradient: linear-gradient(0deg, #0E0E10 0%, #0E0E1080 50%, #0E0E1000 100%)</attr>;
+
+    <span class="chl-comment"> Interractive Cursor Color </span>
+    <attr>--anita-s-cursor: var(--anita-s-heading)</attr>;
+
+
+    <span class="chl-comment"> --- FORMS FIELDS --- </span>
+
+    <span class="chl-comment"> Default Input field border color </span>
+    <attr>--anita-s-input-border: var(--anita-s-content)</attr>;
+
+    <span class="chl-comment"> Default Input field Background color </span>
+    <attr>--anita-s-input-background: var(--anita-s-bg-container)</attr>;
+
+    <span class="chl-comment"> Default Input field Text color </span>
+    <attr>--anita-s-input-text: var(--anita-s-content)</attr>;
+
+    <span class="chl-comment"> Focused Input field Border color </span>
+    <attr>--anita-s-input-focus-border: var(--anita-s-heading)</attr>;
+
+    <span class="chl-comment"> Focused Input field Background color </span>
+    <attr>--anita-s-input-focus-background: var(--anita-s-bg-container)</attr>;
+
+    <span class="chl-comment"> Focused Input field Text color </span>
+    <attr>--anita-s-input-focus-text: var(--anita-s-heading)</attr>;
+
+    <span class="chl-comment"> Normal Button Border color </span>
+    <attr>--anita-s-button-border: var(--anita-s-content)</attr>;
+
+    <span class="chl-comment"> Normal Button Text color </span>
+    <attr>--anita-s-button-text: var(--anita-s-heading)</attr>;
+
+    <span class="chl-comment"> Normal Button Background color </span>
+    <attr>--anita-s-button-bg: #E6E6E600</attr>;
+
+    <span class="chl-comment"> Hover Button Border color </span>
+    <attr>--anita-s-button-hover-border: var(--anita-s-heading)</attr>;
+
+    <span class="chl-comment"> Hover Button Text color </span>
+    <attr>--anita-s-button-hover-text: var(--anita-s-heading)</attr>;
+
+    <span class="chl-comment"> Hover Button Background color </span>
+    <attr>--anita-s-button-hover-bg: #E6E6E610</attr>;
+
+    <span class="chl-comment"> Input field Error Border color </span>
+    <attr>--anita-s-input-border-error: #F22727</attr>;
+
+    <span class="chl-comment"> Input field Error Text color </span>
+    <attr>--anita-s-input-color-error: #F22727</attr>;
+
+
+    <span class="chl-comment"> --- TYPOGRAHY COLORS --- </span>
+
+    <span class="chl-comment"> Link Color </span>
+    <attr>--anita-s-link: var(--anita-s-heading)</attr>;
+
+    <span class="chl-comment"> Hover Link Color </span>
+    <attr>--anita-s-link-hover: var(--anita-s-heading)</attr>;
+
+
+    <span class="chl-comment"> --- NAVIGATION MENU --- </span>
+
+    <span class="chl-comment"> Main Menu Normal link color </span>
+    <attr>--anita-s-menu-link: var(--anita-s-meta)</attr>;
+
+    <span class="chl-comment"> Main Menu Hover link color </span>
+    <attr>--anita-s-menu-link-hover: var(--anita-s-heading)</attr>;
+
+    <span class="chl-comment"> Main Menu Active link color </span>
+    <attr>--anita-s-menu-link-active: var(--anita-s-heading)</attr>;
+
+    <span class="chl-comment"> Sub-Menu Background color (for Simple Menu only) </span>
+    <attr>--anita-s-sub-menu-bg: var(--anita-s-bg-container)</attr>;
+
+    <span class="chl-comment"> Sub-Menu Normal Link color </span>
+    <attr>--anita-s-sub-menu-link: var(--anita-s-meta)</attr>;
+
+    <span class="chl-comment"> Sub-Menu Hover Link color </span>
+    <attr>--anita-s-sub-menu-link-hover: var(--anita-s-heading)</attr>;
+
+    <span class="chl-comment"> Sub-Menu Active Link color </span>
+    <attr>--anita-s-sub-menu-link-active: var(--anita-s-heading)</attr>;
+
+
+    <span class="chl-comment"> --- FOOTER --- </span>
+
+    <span class="chl-comment"> Copyright Text Color </span>
+    <attr>--anita-s-footer-copyright: var(--anita-s-content)</attr>;
+
+    <span class="chl-comment"> Footer Link color (Social Links) </span>
+    <attr>--anita-s-footer-link: var(--anita-s-heading)</attr>;
+
+    <span class="chl-comment"> Footer Link Hover color (Social Links) </span>
+    <attr>--anita-s-footer-link-hover: var(--anita-s-heading)</attr>;
+
+    ...
+}</pre>
+                <!-- // CODE EXAMPLE -->
+                <p class="bottom-gap--m">As you can see, not all options have reused colors. It happens because of the alpha values. And you also can specify your own custom value for any option instead of reusing color scheme colors. In that way, you can easily personalize the color scheme of your website in the way you need.</p>
+
+<!-- Typography -->
+                <h6>Typography</h6>
+                <p>Next, we move on to the <span class="anita-highlight">Typography</span> section, where you can configure font families, sizes, weight, spacings, etc. Let's see how the config looks in this section.</p>
+                <!-- CODE EXAMPLE -->
+<pre class="chl chl-css bottom-gap--m">
+...
+<sel>:root</sel> {
+    ...
+
+    <span class="chl-comment"> ==========
+       TYPOGRAPHY
+       ========== </span>
+
+    <span class="chl-comment"> --- FONT FAMILIES --- </span>
+
+    <span class="chl-comment"> Headings Font Family </span>
+    <attr>--anita-t-heading-ff: 'Rajdhani', sans-serif</attr>;
+
+    <span class="chl-comment"> Content Font Family </span>
+    <attr>--anita-t-content-ff: 'Open Sans', sans-serif;</attr>;
+
+
+    <span class="chl-comment"> --- HEADINGS FONT VALUES --- </span>
+
+    <span class="chl-comment"> Page Title font size </span>
+    <attr>--anita-t-title-fs: 96px;</attr>;
+
+    <span class="chl-comment"> Fullscreen Galleries Caption font size </span>
+    <attr>--anita-t-caption-fs: 64px;</attr>;
+
+    <span class="chl-comment"> H1 Heading font size </span>
+    <attr>--anita-t-h1-fs: 64px</attr>;
+
+    <span class="chl-comment"> H2 Heading font size </span>
+    <attr>--anita-t-h2-fs: 45px</attr>;
+
+    <span class="chl-comment"> H3 Heading font size </span>
+    <attr>--anita-t-h3-fs: 40px</attr>;
+
+    <span class="chl-comment"> H4 Heading font size </span>
+    <attr>--anita-t-h4-fs: 33px</attr>;
+
+    <span class="chl-comment"> H5 Heading font size </span>
+    <attr>--anita-t-h5-fs: 28px</attr>;
+
+    <span class="chl-comment"> H6 Heading font size </span>
+    <attr>--anita-t-h6-fs: 24px</attr>;
+
+    <span class="chl-comment"> Heading line height </span>
+    <attr>--anita-t-heading-lh: 1.25em</attr>;
+
+    <span class="chl-comment"> Heading Font Weight </span>
+    <attr>--anita-t-heading-fw: 700</attr>;
+
+    <span class="chl-comment"> H1 Heading bottom spacing </span>
+    <attr>--anita-t-h1-spacing: 0.7em</attr>;
+
+    <span class="chl-comment"> H2 Heading bottom spacing </span>
+    <attr>--anita-t-h2-spacing: 0.75em</attr>;
+
+    <span class="chl-comment"> H3 Heading bottom spacing </span>
+    <attr>--anita-t-h3-spacing: 0.85em</attr>;
+
+    <span class="chl-comment"> H4 Heading bottom spacing </span>
+    <attr>--anita-t-h4-spacing: 1em</attr>;
+
+    <span class="chl-comment"> H5 Heading bottom spacing </span>
+    <attr>--anita-t-h5-spacing: 1em</attr>;
+
+    <span class="chl-comment"> H6 Heading bottom spacing </span>
+    <attr>--anita-t-h6-spacing: 1.65em</attr>;
+
+    <span class="chl-comment"> Headings SUP opacity </span>
+    <attr>--anita-o-heading-sup: 0.25</attr>;
+
+
+    <span class="chl-comment"> --- CONTENT FONT VALUES --- </span>
+
+    <span class="chl-comment"> Content text Font Size </span>
+    <attr>--anita-t-content-fs: 16px</attr>;
+
+    <span class="chl-comment"> Content text Line Height </span>
+    <attr>--anita-t-content-lh: 1.8em</attr>;
+
+    <span class="chl-comment"> Content text Font Weight </span>
+    <attr>--anita-t-content-fw: 600</attr>;
+
+    <span class="chl-comment"> Bold text Font Weight (For tag <span><</span>strong<span>></span>) </span>
+    <attr>--anita-t-content-strong-fw: 800</attr>;
+
+    <span class="chl-comment"> Meta text Font Size </span>
+    <attr>--anita-t-meta-fs: 14px</attr>;
+
+    <span class="chl-comment"> Footer text Font Size </span>
+    <attr>--anita-t-footer-fs: 14px</attr>;
+
+
+    <span class="chl-comment"> --- MENU FONT VALUES --- </span>
+
+    <span class="chl-comment"> Fullscreen Main menu Font Size </span>
+    <attr>--anita-t-fullscreen-menu-fs: 64px</attr>;
+
+    <span class="chl-comment"> Fullscreen Sub-menu Font Size </span>
+    <attr>--anita-t-fullscreen-sub-menu-fs: 16px</attr>;
+
+    <span class="chl-comment"> Simple Main menu Font Size </span>
+    <attr>--anita-t-simple-menu-fs: 14px</attr>;
+
+    <span class="chl-comment"> Simple Sub-menu Font Size </span>
+    <attr>--anita-t-sub-menu-fs: 14px</attr>;
+
+
+    <span class="chl-comment"> --- FORMS FONT VALUES --- </span>
+
+    <span class="chl-comment"> Input field Font Size </span>
+    <attr>--anita-t-input-fs: 14px</attr>;
+
+    <span class="chl-comment"> Button Font Size </span>
+    <attr>--anita-t-button-fs: 18px</attr>;
+
+    ...
+}</pre>
+                <!-- // CODE EXAMPLE -->
+
+<!-- Grid and Spacings -->
+                <h6>Grid and Spacings</h6>
+                <p>In the next section, you can adjust the content width, padding, margin, and other spacing values for your website. Let's take a look at the code:</p>
+                <!-- CODE EXAMPLE -->
+<pre class="chl chl-css bottom-gap--m">
+...
+<sel>:root</sel> {
+    ...
+
+    <span class="chl-comment"> =================
+       GRID AND SPACINGS
+       ================= </span>
+
+    <span class="chl-comment"> Maximum Content Width </span>
+    <attr>--anita-container-width: 1400px</attr>;
+
+    <span class="chl-comment"> Page TOP spacing </span>
+    <attr>--anita-container-top-spacing: 240px</attr>;
+
+    <span class="chl-comment"> Page BOTTOM spacing </span>
+    <attr>--anita-container-bottom-spacing: 200px</attr>;
+
+    <span class="chl-comment"> Grid items Normal spacing </span>
+    <attr>--anita-grid-gap: 40px</attr>;
+
+    <span class="chl-comment"> Grid items Small spacing </span>
+    <attr>--anita-grid-small-gap: 20px</attr>;
+
+    <span class="chl-comment"> Section Bottom spacing </span>
+    <attr>--anita-section-gap: 240px</attr>;
+
+    <span class="chl-comment"> Small bottom spacing (for blocks custom class) </span>
+    <attr>--anita-bottom-gap-small: 40px</attr>;
+
+    <span class="chl-comment"> Medium bottom spacing (for blocks custom class) </span>
+    <attr>--anita-bottom-gap-medium: 80px</attr>;
+
+    <span class="chl-comment"> Large bottom spacing (for blocks custom class) </span>
+    <attr>--anita-bottom-gap-large: 120px</attr>;
+
+    <span class="chl-comment"> Header inner spacing </span>
+    <attr>--anita-header-spacing: 40px 50px 40px 50px</attr>;
+
+    <span class="chl-comment"> Footer inner spacing </span>
+    <attr>--anita-footer-spacing: 41px 50px 42px 50px</attr>;
+
+    <span class="chl-comment"> Button Inner Spacing </span>
+    <attr>--anita-button-padding: 17px 32px 17px 32px</attr>;
+
+    ...
+}</pre>
+                <!-- // CODE EXAMPLE -->
+
+<!-- Responsive -->
+                <h6>Responsive</h6>
+                <p>At the bottom of the configuration file, you can also find a section where you can define adaptive values for some parameters to set up a good look for devices with smaller screen sizes.</p>
+                <!-- CODE EXAMPLE -->
+<pre class="chl chl-css bottom-gap--m">
+...
+<sel>:root</sel> {
+    ...
+}
+
+<span class="chl-comment"> =================
+    RESPONSIVE VALUES
+    ================= </span>
+
+<span class="chl-comment"> --- Medium Screens --- </span>
+<span class="is-tag chl-selector">@media only <span class="is-spec chl-selector">screen</span> and</span> (max-width: <span class="is-spec chl-selector">1680px</span>) {
+    <sel>:root</sel> {
+        ...
+    }
+}
+
+<span class="chl-comment"> --- Laptop --- </span>
+<span class="is-tag chl-selector">@media only <span class="is-spec chl-selector">screen</span> and</span> (max-width: <span class="is-spec chl-selector">1366px</span>) {
+    <sel>:root</sel> {
+        ...
+    }
+}
+
+<span class="chl-comment"> --- Tablet: Landscape --- </span>
+<span class="is-tag chl-selector">@media only <span class="is-spec chl-selector">screen</span> and</span> (max-width: <span class="is-spec chl-selector">1200px</span>) {
+    <sel>:root</sel> {
+        ...
+    }
+}
+
+<span class="chl-comment"> --- Tablet: Portrait --- </span>
+<span class="is-tag chl-selector">@media only <span class="is-spec chl-selector">screen</span> and</span> (max-width: <span class="is-spec chl-selector">960px</span>) {
+    <sel>:root</sel> {
+        ...
+    }
+}
+
+<span class="chl-comment"> --- Mobile Phones --- </span>
+<span class="is-tag chl-selector">@media only <span class="is-spec chl-selector">screen</span> and</span> (max-width: <span class="is-spec chl-selector">739px</span>) {
+    <sel>:root</sel> {
+        ...
+    }
+}
+</pre>
+                <!-- // CODE EXAMPLE -->
+            </section>
+
+            <!-- Section: Next Chapter  -->
+            <section class="anita-section">
+                <div class="anita-cta" data-aos="fade-up">
+                    <h4>
+                        Next Chapter
+                    </h4>
+                    <div class="anita-caption">
+                        <a href="credits.html" class="anita-underline">Credits</a>
+                    </div>
+                </div><!-- .anita-cta -->
+            </section>
+        </div>
+    </main>
+
+    <!-- Spotlight -->
+    <div class="anita-spotlight"></div>
+
+    <!-- JS Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../js/anita.js"></script>
+</body>

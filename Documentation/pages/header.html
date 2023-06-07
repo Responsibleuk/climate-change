@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Page Title -->
+    <title>Anita | Creative Photography</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600;800&family=Rajdhani:wght@700&family=Roboto+Mono&display=swap" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="../css/config.css">
+    <link type="text/css" rel="stylesheet" href="../css/anita.css">
+
+    <!-- Favicon -->
+    <link rel="icon" href="../img/favicon.png" sizes="32x32" />
+</head>
+<body data-barba="wrapper">
+    <!-- Navigation -->
+    <div class="anita-navigation-wrap">
+        <nav class="anita-nav">
+            <ul class="anita-menu">
+                <li>
+                    <a href="../index.html"><sup>01</sup> Welcome</a>
+                </li>
+                <li>
+                    <a href="overview.html"><sup>02</sup> Overview</a>
+                </li>
+                <li>
+                    <a href="structure.html"><sup>03</sup> HTML Structure</a>
+                </li>
+                <li class="is-active">
+                    <a href="header.html"><sup>04</sup> Header and Menu</a>
+                </li>
+                <li>
+                    <a href="footer.html"><sup>05</sup> Footer and Socials</a>
+                </li>
+                <li>
+                    <a href="options.html"><sup>06</sup> Options and Settings</a>
+                </li>
+                <li>
+                    <a href="content.html"><sup>07</sup> Content and Grid</a>
+                </li>
+                <li>
+                    <a href="elements.html"><sup>08</sup> Content Elements</a>
+                </li>
+                <li>
+                    <a href="listing.html"><sup>09</sup> Albums Listing</a>
+                </li>
+                <li>
+                    <a href="albums.html"><sup>10</sup> Album Posts</a>
+                </li>
+                <li>
+                    <a href="contact.html"><sup>11</sup> Contact Form</a>
+                </li>
+                <li>
+                    <a href="customize.html"><sup>12</sup> Style Customization</a>
+                </li>
+                <li>
+                    <a href="credits.html"><sup>13</sup> Credits</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    
+    <main data-barba="container" data-barba-namespace="intro">
+        <!-- Content -->
+        <div class="anita-container">
+            <!-- SECTION: Header and Menu -->
+            <section>
+                <div class="grid grid--33-66 bottom-gap--s">
+                    <div>
+                        <h2><sup>04.</sup> Header and Menu</h2>
+                    </div>
+                    <div>
+                        Here we will show you how easy and fast you can create a header and main menu using our template. There are several ways how to do this and two menu-style options.
+                    </div>
+                </div><!-- .grid -->
+
+                <p>In our template, we have implemented a quick way to create the same header for all pages with the ability to easily edit the main menu and logo. Also, you can hold on to the classic method of a hard-coded menu and logo. In both cases, the main structure of the header will look like this:</p>
+
+<!-- CODE EXAMPLE -->
+<pre class="chl chl-html bottom-gap--p">
+<span class="chl-comment"> Header </span>
+<tag>header <attr class="is-id">id="<span class="chl-attr-val">anita-header</span>"</attr> <attr class="is-class">class="<span class="chl-attr-val">anita-header</span>"</attr></tag>
+    <tag>div <attr class="is-class">class="<span class="chl-attr-val">anita-header-inner</span>"</attr></tag>
+        <tag>div <attr class="is-class">class="<span class="chl-attr-val">anita-logo-wrapper</span>"</attr></tag>
+            ...
+        <tag>/div</tag>
+        <tag>div <attr class="is-class">class="<span class="chl-attr-val">anita-menu-wrapper</span>"</attr></tag>
+            ...
+        <tag>/div</tag>
+    <tag>/div</tag>
+<tag>/header</tag></pre>
+<!-- // CODE EXAMPLE -->
+
+                <p class="bottom-gap--m">As you can see, there are two blocks inside the <span class="chl-tag">div.<span class="chl-attr-val">anita-header-inner</span></span>. The first block <span class="chl-tag">div.<span class="chl-attr-val">anita-logo-wrapper</span></span> is a container for the logo, and the second one <span class="chl-tag">div.<span class="chl-attr-val">anita-menu-wrapper</span></span> is used for the simple main menu or the menu toggle button if the fullscreen menu option is used.</p>
+
+                <h6>Logo</h6>
+                <p>First of all, let's talk about the logo. Here is an example of the code to put inside the logo container.</p>
+
+<!-- // CODE EXAMPLE -->
+<pre class="chl chl-html bottom-gap--p">
+<span class="chl-comment"> Logo </span>
+<tag>a <attr>href="<span class="chl-attr-val">index.html</span>"</attr> <attr class="is-class">class="<span class="chl-attr-val">anita-logo is-retina</span>"</attr></tag>
+    <tag>img <attr>src="<span class="chl-attr-val">img/logo.png</span>"</attr> <attr>alt="<span class="chl-attr-val">Anita Photography</span>"</attr> <attr class="chl-imp">width="<span class="chl-attr-val">192</span>"</attr> <attr class="chl-imp">height="<span class="chl-attr-val">80</span>"</attr></tag>
+<tag>/a</tag></pre>
+<!-- // CODE EXAMPLE -->
+
+                <p class="bottom-gap--m">In the <code class="chl chl-inline chl-html"><tag>a/</tag></code> tag, you specify the URL of your home page in the <span class="chl-attr">href</span> attribute. The class <span class="chl-attr-val">anita-logo</span> is required to identify this link as a logo, and the class <span class="chl-attr-val">is-retina</span> is optional but highly recommended to make your logo looks good on the retina displays. In case the <span class="chl-attr-val">is-retina</span> class is used, your logo should be <span class="anita-highlight">2x</span> the displayed size. For example, if you wish to show your logo as <span class="anita-highlight">96x40</span> pixels size, your image file must be <span class="anita-highlight">192x80</span>. Also, inside the <code class="chl chl-inline chl-html"><tag>img</tag></code> tag, where you put your logo URL, you should specify the <span class="chl-attr">width</span> and <span class="chl-attr">height</span> attributes of the original image size.</p>
+
+                <h6>Main Menu</h6>
+                <p>Now we will talk about the main menu. In our template, there are two layouts for the main menu. The first one is a fullscreen menu. It has a modern and minimal design and is well suited for a creative portfolio website. To create the fullscreen menu for your page, you should add the toggle menu button into the <span class="chl-tag">div.<span class="chl-attr-val">anita-menu-wrapper</span></span> and another <span class="chl-tag">div.<span class="chl-attr-val">anita-fullscreen-menu-wrap</span></span> block after the <code class="chl chl-inline chl-html"><tag>/header</tag></code>. Here is an example of the markup:</p>
+
+<!-- CODE EXAMPLE -->
+<pre class="chl chl-html">
+        ...
+        <tag>div <attr class="is-class">class="<span class="chl-attr-val">anita-menu-wrapper</span>"</attr></tag>
+            ...
+            <span class="chl-comment"> Menu Toggle Button </span>
+            <tag>a <attr>href="<span class="chl-attr-val">#</span>"</attr> <attr class="is-class">class="<span class="chl-attr-val">anita-menu-toggler</span>"</attr></tag>
+                <tag>i <attr class="is-class">class="<span class="chl-attr-val">anita-menu-toggler-icon</span>"</attr></tag><tag>/i</tag>
+            <tag>/a</tag>
+        <tag>/div</tag>
+    <tag class="chl-fade">/div</tag>
+<tag class="chl-fade">/header</tag>
+
+<span class="chl-comment"> Fullscreen Menu </span>
+<tag>div <attr class="is-class">class="<span class="chl-attr-val">anita-fullscreen-menu-wrap</span>"</attr></tag>
+    <tag>nav <attr class="is-class">class="<span class="chl-attr-val">anita-nav anita-js-menu</span>"</attr></tag><tag>/nav</tag>
+<tag>/div</tag></pre>
+    <!-- // CODE EXAMPLE -->
+
+                <p>That is all you need right now. you can pay attention to the additional class <span class="chl-attr-val">anita-js-menu</span> and wonder where exactly the menu is. But we will talk about this a little later. For now, let's look at the markup for a simple menu. It has a classic, simple look and still looks good for today's creative websites.</p>
+
+<!-- CODE EXAMPLE -->
+<pre class="chl chl-html">
+        ...
+        <tag>div <attr class="is-class">class="<span class="chl-attr-val">anita-menu-wrapper</span>"</attr></tag>
+            ...
+            <span class="chl-comment"> Simple Menu Nav </span>
+            <tag>nav <attr class="is-class">class="<span class="chl-attr-val">anita-nav anita-simple-nav anita-js-menu</span>"</attr></tag><tag>/nav</tag>
+        <tag>/div</tag>
+    <tag class="chl-fade">/div</tag>
+<tag class="chl-fade">/header</tag></pre>
+<!-- // CODE EXAMPLE -->
+
+                <p>As you can see, for now, the tag <code class="chl chl-inline chl-html"><tag>nav</tag></code> is placed directly into the <span class="chl-tag">div.<span class="chl-attr-val">anita-menu-wrapper</span></span> block and has the additional class <span class="chl-attr-val">anita-simple-nav</span>. But, there is still no menu code here. So, what is going on? Now we will explain.</p>
+                <p>We have already drawn your attention to the additional class <span class="chl-attr-val">anita-js-menu</span>. Thanks to it, the menu is created automatically for all pages according to the configuration in the core script file <span class="anita-highlight">js/core.js</span>. At the beginning of this file, you can see the constant object of the template config. And the first option is <span class="chl-inline-imp">main_menu</span>:</p>
+
+<!-- CODE EXAMPLE -->
+<pre class="chl chl-css"><span class="chl-comment">*
+* Author: Shadow Themes
+* Author URL: https://shadow-themes.com
+</span>
+"use strict";
+
+<span class="chl-comment"> --- Anita Config --- </span>
+<sel class="is-tag">const</sel> anita_config <sel class="is-tag">=</sel> {
+    <span class="chl-comment"> --- Header and Menu --- </span>
+    <attr class="is-spec">main_menu</attr>: {
+        <span class="chl-css-attr-n">'Works'</span>: {
+            <span class="chl-css-attr-n">'Slide Carousel'</span>: <span class="chl-css-attr-n">'index.html'</span>,
+            <span class="chl-css-attr-n">'Roll Carousel'</span>: <span class="chl-css-attr-n">'works-carousel-roll.html'</span>,
+            <span class="chl-css-attr-n">'Fullscreen Slider'</span>: {
+                <span class="chl-css-attr-n">'Parallax Movement'</span>: <span class="chl-css-attr-n">'works-slider-parallax.html'</span>,
+                <span class="chl-css-attr-n">'Fade Sliding'</span>: <span class="chl-css-attr-n">'works-slider-fade.html'</span>,
+                <span class="chl-css-attr-n">'Diagonally Sliced'</span>: <span class="chl-css-attr-n">'works-slider-sliced.html'</span>,
+                <span class="chl-css-attr-n">'Pixel Storm'</span>: <span class="chl-css-attr-n">'works-slider-pixels.html'</span>
+            },
+            <span class="chl-css-attr-n">'Flat Carousel'</span>: <span class="chl-css-attr-n">'works-carousel-flat.html'</span>,
+            <span class="chl-css-attr-n">'Classic Grid'</span>: <span class="chl-css-attr-n">'works-classic-grid.html'</span>,
+            <span class="chl-css-attr-n">'Simple Menu'</span>: <span class="chl-css-attr-n">'simple-menu.html'</span>
+        },
+        <span class="chl-css-attr-n">'Galleries'</span>: {
+            <span class="chl-css-attr-n">'WebGL Carousel'</span>: <span class="chl-css-attr-n">'albums-gl-carousel.html'</span>,
+            <span class="chl-css-attr-n">'Flat Carousel'</span>: <span class="chl-css-attr-n">'albums-carousel.html'</span>,
+            <span class="chl-css-attr-n">'Slider'</span>: {
+                <span class="chl-css-attr-n">'Parallax Movement'</span>: <span class="chl-css-attr-n">'albums-slider-parallax.html'</span>,
+                <span class="chl-css-attr-n">'Fade Sliding'</span>: <span class="chl-css-attr-n">'albums-slider-fade.html'</span>,
+                <span class="chl-css-attr-n">'Diagonally Sliced'</span>: <span class="chl-css-attr-n">'albums-slider-sliced.html'</span>,
+                <span class="chl-css-attr-n">'Pixel Storm'</span>: <span class="chl-css-attr-n">'albums-slider-pixels.html'</span>
+            },
+            <span class="chl-css-attr-n">'Adjusted Grid'</span>: {
+                <span class="chl-css-attr-n">'Adjusted: 2 Columns'</span>: <span class="chl-css-attr-n">'albums-adjusted-2col.html'</span>,
+                <span class="chl-css-attr-n">'Adjusted: 3 Columns'</span>: <span class="chl-css-attr-n">'albums-adjusted-3col.html'</span>,
+                <span class="chl-css-attr-n">'Adjusted: 4 Columns'</span>: <span class="chl-css-attr-n">'albums-adjusted-4col.html'</span>
+            },
+            <span class="chl-css-attr-n">'Strong Grid'</span>: {
+                <span class="chl-css-attr-n">'Grid: 2 Columns'</span>: <span class="chl-css-attr-n">'albums-grid-2col.html'</span>,
+                <span class="chl-css-attr-n">'Grid: 3 Columns'</span>: <span class="chl-css-attr-n">'albums-grid-3col.html'</span>,
+                <span class="chl-css-attr-n">'Grid: 4 Columns'</span>: <span class="chl-css-attr-n">'albums-grid-4col.html'</span>
+            },
+            <span class="chl-css-attr-n">'Masonry Grid'</span>: {
+                <span class="chl-css-attr-n">'Masonry: 2 Columns'</span>: <span class="chl-css-attr-n">'albums-masonry-2col.html'</span>,
+                <span class="chl-css-attr-n">'Masonry: 3 Columns'</span>: <span class="chl-css-attr-n">'albums-masonry-3col.html'</span>,
+                <span class="chl-css-attr-n">'Masonry: 4 Columns'</span>: <span class="chl-css-attr-n">'albums-masonry-4col.html'</span>
+            },
+            <span class="chl-css-attr-n">'Justified'</span>: <span class="chl-css-attr-n">'albums-justified.html'</span>,
+            <span class="chl-css-attr-n">'Bricks 1x2'</span>: <span class="chl-css-attr-n">'albums-bricks-1x2.html'</span>,
+            <span class="chl-css-attr-n">'Bricks 2x3'</span>: <span class="chl-css-attr-n">'albums-bricks-2x3.html'</span>
+        },
+        <span class="chl-css-attr-n">'About'</span>: <span class="chl-css-attr-n">'page-about.html'</span>,
+        <span class="chl-css-attr-n">'Services'</span>: <span class="chl-css-attr-n">'page-services.html'</span>,
+        <span class="chl-css-attr-n">'Testimonials'</span>: <span class="chl-css-attr-n">'page-testimonials.html'</span>,
+        <span class="chl-css-attr-n">'Contacts'</span>: <span class="chl-css-attr-n">'page-contacts.html'</span>
+    }
+    ...
+}
+...</pre>
+<!-- // CODE EXAMPLE -->
+
+                <p>As you can see, things are pretty simple. Inside the <span class="anita-highlight"><span class="is-spec chl-selector">main_menu</span>: { ... }</span>, you create your main menu structure according to the following pattern:</p>
+
+<!-- CODE EXAMPLE -->
+<pre class="chl chl-css">
+<span class="chl-css-attr-n">'Menu Item Label'</span>: <span class="chl-css-attr-n">'https://your_link_url'</span>,
+</pre> 
+<!-- // CODE EXAMPLE -->
+
+                <p>Or the next one, if the menu item must content <span class="anita-highlight">sub-menu</span>:</p>
+
+<!-- CODE EXAMPLE -->
+<pre class="chl chl-css">
+<span class="chl-css-attr-n">'Item Label'</span>: {
+    ...
+},
+</pre>
+<!-- // CODE EXAMPLE -->
+
+                <p>Also, don't forget to use commas after each line. And that is all. Within one simple config file, you can easily add, change, and remove menu items from one place for all pages. Isn't it great? This works both for simple and fullscreen menus and will be placed into the <span class="chl-tag">nav.<span class="chl-attr-val">anita-nav</span></span></p>
+                <p>But, if you plan to use our template for some CMS or has any other reasons not to use the procedural menu, here is a markup of the menu's HTML code:</p>
+
+<!-- CODE EXAMPLE -->
+<pre class="chl chl-html">
+<tag>ul <attr class="is-class">class="<span class="chl-attr-val">main-menu</span>"</attr></tag>
+    <tag>li <attr class="is-class">class="<span class="chl-attr-val">menu-item-has-children current-menu-parent</span>"</attr></tag>
+        <tag>ul <attr class="is-class">class="<span class="chl-attr-val">sub-menu</span>"</attr></tag>
+            <tag>li <attr class="is-class">class="<span class="chl-attr-val">current-menu-item</span>"</attr></tag>
+                <tag>a <attr>href="<span class="chl-attr-val">index.html</span>"</attr></tag>Slide Carousel<tag>/a</tag>
+            <tag>/li</tag>
+            <tag>li</tag>
+                <tag>a <attr>href="<span class="chl-attr-val">works-carousel-roll.html</span>"</attr></tag>Roll Carousel<tag>/a</tag>
+            <tag>/li</tag>
+            <tag>li <attr class="is-class">class="<span class="chl-attr-val">menu-item-has-children</span>"</attr></tag>
+                <tag>a <attr>href="<span class="chl-attr-val">#</span>"</attr></tag>Fullscreen Slider<tag>/a</tag>
+                <tag>ul <attr class="is-class">class="<span class="chl-attr-val">sub-menu</span>"</attr></tag>
+                    <tag>li</tag>
+                        <tag>a <attr>href="<span class="chl-attr-val">works-slider-parallax.html</span>"</attr></tag>Parallax Movement<tag>/a</tag>
+                    <tag>/li</tag>
+                    <tag>li</tag>
+                        <tag>a <attr>href="<span class="chl-attr-val">works-slider-fade.html</span>"</attr></tag>Fade Sliding<tag>/a</tag>
+                    <tag>/li</tag>
+                    <tag>li</tag>
+                        <tag>a <attr>href="<span class="chl-attr-val">works-slider-sliced.html</span>"</attr></tag>Diagonally Sliced<tag>/a</tag>
+                    <tag>/li</tag>
+                    <tag>li</tag>
+                        <tag>a <attr>href="<span class="chl-attr-val">works-slider-pixels.html</span>"</attr></tag>Pixel Storm<tag>/a</tag>
+                    <tag>/li</tag>
+                <tag>/ul</tag>
+            <tag>/li</tag>
+            <tag>li</tag>
+                <tag>a <attr>href="<span class="chl-attr-val">works-carousel-flat.html</span>"</attr></tag>Flat Carousel<tag>/a</tag>
+            <tag>/li</tag>
+            <tag>li</tag>
+                <tag>a <attr>href="<span class="chl-attr-val">works-classic-grid.html</span>"</attr></tag>Classic Grid<tag>/a</tag>
+            <tag>/li</tag>
+            <tag>li</tag>
+                <tag>a <attr>href="<span class="chl-attr-val">simple-menu.html</span>"</attr></tag>Simple Menu<tag>/a</tag>
+            <tag>/li</tag>
+        <tag>/ul</tag>
+    <tag>/li</tag>
+    <tag>li <attr class="is-class">class="<span class="chl-attr-val">menu-item-has-children</span>"</attr></tag>
+        <tag>a <attr>href="<span class="chl-attr-val">#</span>"</attr></tag>Galleries<tag>/a</tag>
+        <tag>ul <attr class="is-class">class="<span class="chl-attr-val">sub-menu</span>"</attr></tag>
+            <tag>li</tag>
+                <tag>a <attr>href="<span class="chl-attr-val">albums-gl-carousel.html</span>"</attr></tag>WebGL Carousel<tag>/a</tag>
+            <tag>/li</tag>
+            <tag>li</tag>
+                <tag>a <attr>href="<span class="chl-attr-val">albums-carousel.html</span>"</attr></tag>Flat Carousel<tag>/a</tag>
+            <tag>/li</tag>
+            <tag>li <attr class="is-class">class="<span class="chl-attr-val">menu-item-has-children</span>"</attr></tag>
+                <tag>a <attr>href="<span class="chl-attr-val">#</span>"</attr></tag>Slider<tag>/a</tag>
+                <tag>ul <attr class="is-class">class="<span class="chl-attr-val">sub-menu</span>"</attr></tag>
+                    <tag>li</tag>
+                        <tag>a <attr>href="<span class="chl-attr-val">albums-slider-parallax.html</span>"</attr></tag>Parallax Movement<tag>/a</tag>
+                    <tag>/li</tag>
+                    <tag>li</tag>
+                        <tag>a <attr>href="<span class="chl-attr-val">albums-slider-fade.html</span>"</attr></tag>Fade Sliding<tag>/a</tag>
+                    <tag>/li</tag>
+                    <tag>li</tag>
+                        <tag>a <attr>href="<span class="chl-attr-val">albums-slider-sliced.html</span>"</attr></tag>Diagonally Sliced<tag>/a</tag>
+                    <tag>/li</tag>
+                    <tag>li</tag>
+                        <tag>a <attr>href="<span class="chl-attr-val">albums-slider-pixels.html</span>"</attr></tag>Pixel Storm<tag>/a</tag>
+                    <tag>/li</tag>
+                <tag>/ul</tag>
+            <tag>/li</tag>
+            <tag>li <attr class="is-class">class="<span class="chl-attr-val">menu-item-has-children</span>"</attr></tag>
+                <tag>a <attr>href="<span class="chl-attr-val">#</span>"</attr></tag>Adjusted Grid<tag>/a</tag>
+                <tag>ul <attr class="is-class">class="<span class="chl-attr-val">sub-menu</span>"</attr></tag>
+                    <tag>li</tag>
+                        <tag>a <attr>href="<span class="chl-attr-val">albums-adjusted-2col.html</span>"</attr></tag>Adjusted: 2 Columns<tag>/a</tag>
+                    <tag>/li</tag>
+                    <tag>li</tag>
+                        <tag>a <attr>href="<span class="chl-attr-val">albums-adjusted-3col.html</span>"</attr></tag>Adjusted: 3 Columns<tag>/a</tag>
+                    <tag>/li</tag>
+                    <tag>li</tag>
+                        <tag>a <attr>href="<span class="chl-attr-val">albums-adjusted-4col.html</span>"</attr></tag>Adjusted: 4 Columns<tag>/a</tag>
+                    <tag>/li</tag>
+                <tag>/ul</tag>
+            <tag>/li</tag>
+            <tag>li <attr class="is-class">class="<span class="chl-attr-val">menu-item-has-children</span>"</attr></tag>
+                <tag>a <attr>href="<span class="chl-attr-val">#</span>"</attr></tag>Strong Grid<tag>/a</tag>
+                <tag>ul <attr class="is-class">class="<span class="chl-attr-val">sub-menu</span>"</attr></tag>
+                    <tag>li</tag>
+                        <tag>a <attr>href="<span class="chl-attr-val">albums-grid-2col.html</span>"</attr></tag>Grid: 2 Columns<tag>/a</tag>
+                    <tag>/li</tag>
+                    <tag>li</tag>
+                        <tag>a <attr>href="<span class="chl-attr-val">albums-grid-3col.html</span>"</attr></tag>Grid: 3 Columns<tag>/a</tag>
+                    <tag>/li</tag>
+                    <tag>li</tag>
+                        <tag>a <attr>href="<span class="chl-attr-val">albums-grid-4col.html</span>"</attr></tag>Grid: 4 Columns<tag>/a</tag>
+                    <tag>/li</tag>
+                <tag>/ul</tag>
+            <tag>/li</tag>
+            <tag>li <attr class="is-class">class="<span class="chl-attr-val">menu-item-has-children</span>"</attr></tag>
+                <tag>a <attr>href="<span class="chl-attr-val">#</span>"</attr></tag>Masonry Grid<tag>/a</tag>
+                <tag>ul <attr class="is-class">class="<span class="chl-attr-val">sub-menu</span>"</attr></tag>
+                    <tag>li</tag>
+                        <tag>a <attr>href="<span class="chl-attr-val">albums-masonry-2col.html</span>"</attr></tag>Masonry: 2 Columns<tag>/a</tag>
+                    <tag>/li</tag>
+                    <tag>li</tag>
+                        <tag>a <attr>href="<span class="chl-attr-val">albums-masonry-3col.html</span>"</attr></tag>Masonry: 3 Columns<tag>/a</tag>
+                    <tag>/li</tag>
+                    <tag>li</tag>
+                        <tag>a <attr>href="<span class="chl-attr-val">albums-masonry-4col.html</span>"</attr></tag>Masonry: 4 Columns<tag>/a</tag>
+                    <tag>/li</tag>
+                <tag>/ul</tag>
+            <tag>/li</tag>
+            <tag>li</tag>
+                <tag>a <attr>href="<span class="chl-attr-val">albums-justified.html</span>"</attr></tag>Justified<tag>/a</tag>
+            <tag>/li</tag>
+            <tag>li</tag>
+                <tag>a <attr>href="<span class="chl-attr-val">albums-bricks-1x2.html</span>"</attr></tag>Bricks 1x2<tag>/a</tag>
+            <tag>/li</tag>
+            <tag>li</tag>
+                <tag>a <attr>href="<span class="chl-attr-val">albums-bricks-2x3.html</span>"</attr></tag>Bricks 2x3<tag>/a</tag>
+            <tag>/li</tag>
+        <tag>/ul</tag>
+    <tag>/li</tag>
+    <tag>li</tag>
+        <tag>a <attr>href="<span class="chl-attr-val">page-about.html</span>"</attr></tag>About<tag>/a</tag>
+    <tag>/li</tag>
+    <tag>li</tag>
+        <tag>a <attr>href="<span class="chl-attr-val">page-services.html</span>"</attr></tag>Services<tag>/a</tag>
+    <tag>/li</tag>
+    <tag>li</tag>
+        <tag>a <attr>href="<span class="chl-attr-val">page-testimonials.html</span>"</attr></tag>Testimonials<tag>/a</tag>
+    <tag>/li</tag>
+    <tag>li</tag>
+        <tag>a <attr>href="<span class="chl-attr-val">page-contacts.html</span>"</attr></tag>Contacts<tag>/a</tag>
+    <tag>/li</tag>
+<tag>/ul</tag></pre>
+<!-- // CODE EXAMPLE -->
+
+                <p class="bottom-gap--m">The important thing is to use the <span class="chl-attr-val">main-menu</span> class for the main parent <span class="chl-tag">&lt;ul&gt;</span>, the class <span class="chl-attr-val">menu-item-has-children</span> for parent <span class="chl-tag">&lt;li&gt;</span> items, and classes <span class="chl-attr-val">current-menu-parent</span> and <span class="chl-attr-val">current-menu-item</span> to highlight the parent of the current menu item <span class="chl-tag">&lt;li&gt;</span> and the current menu item <span class="chl-tag">&lt;li&gt;</span>. The <span class="anita-highlight">sub-menu</span> <span class="chl-tag">&lt;ul&gt;</span> must have class <span class="chl-attr-val">sub-menu</span>.</p>
+                
+                <h6>Additional Options</h6>
+                <p>Now, when we have the logo and the main menu, let's take a look at the other options related to the header you can find in the config inside the <span class="anita-highlight">js/core.js</span> file:</p>
+
+<!-- CODE EXAMPLE -->
+<pre class="chl chl-css">
+...
+
+<span class="chl-js-comment">// Option to stick the header to the top of the page</span>
+<attr class="is-spec">sticky_header</attr>: <span class="chl-css-attr-n">true</span>,
+
+<span class="chl-js-comment">// Menu items appear delay in milliseconds</span>
+<attr class="is-spec">fs_menu_delay</attr>: <span class="chl-css-attr-n">100</span>,
+
+...
+</pre>
+<!-- // CODE EXAMPLE -->
+            </section>
+
+            <!-- Section: Next Chapter  -->
+            <section class="anita-section">
+                <div class="anita-cta" data-aos="fade-up">
+                    <h4>
+                        Next Chapter
+                    </h4>
+                    <div class="anita-caption">
+                        <a href="footer.html" class="anita-underline">Footer and Socials</a>
+                    </div>
+                </div><!-- .anita-cta -->
+            </section>
+        </div>
+    </main>
+
+    <!-- Spotlight -->
+    <div class="anita-spotlight"></div>
+
+    <!-- JS Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../js/anita.js"></script>
+</body>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Page Title -->
+    <title>Anita | Creative Photography</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600;800&family=Rajdhani:wght@700&family=Roboto+Mono&display=swap" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="../css/config.css">
+    <link type="text/css" rel="stylesheet" href="../css/anita.css">
+
+    <!-- Favicon -->
+    <link rel="icon" href="../img/favicon.png" sizes="32x32" />
+</head>
+<body data-barba="wrapper">
+    <!-- Navigation -->
+    <div class="anita-navigation-wrap">
+        <nav class="anita-nav">
+            <ul class="anita-menu">
+                <li>
+                    <a href="../index.html"><sup>01</sup> Welcome</a>
+                </li>
+                <li>
+                    <a href="overview.html"><sup>02</sup> Overview</a>
+                </li>
+                <li>
+                    <a href="structure.html"><sup>03</sup> HTML Structure</a>
+                </li>
+                <li>
+                    <a href="header.html"><sup>04</sup> Header and Menu</a>
+                </li>
+                <li class="is-active">
+                    <a href="footer.html"><sup>05</sup> Footer and Socials</a>
+                </li>
+                <li>
+                    <a href="options.html"><sup>06</sup> Options and Settings</a>
+                </li>
+                <li>
+                    <a href="content.html"><sup>07</sup> Content and Grid</a>
+                </li>
+                <li>
+                    <a href="elements.html"><sup>08</sup> Content Elements</a>
+                </li>
+                <li>
+                    <a href="listing.html"><sup>09</sup> Albums Listing</a>
+                </li>
+                <li>
+                    <a href="albums.html"><sup>10</sup> Album Posts</a>
+                </li>
+                <li>
+                    <a href="contact.html"><sup>11</sup> Contact Form</a>
+                </li>
+                <li>
+                    <a href="customize.html"><sup>12</sup> Style Customization</a>
+                </li>
+                <li>
+                    <a href="credits.html"><sup>13</sup> Credits</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    
+    <main data-barba="container" data-barba-namespace="intro">
+        <!-- Content -->
+        <div class="anita-container">
+            <!-- SECTION: Footer and Socials -->
+            <section>
+                <div class="grid grid--33-66 bottom-gap--s">
+                    <div>
+                        <h2><sup>05.</sup> Footer and Socials</h2>
+                    </div>
+                    <div>
+                        <p>The footer is another element that is the same for all pages. With that in mind, it also has features that can be configured in the JS config in our core script <span class="anita-highlight">js/core.js</span>. But first, let's look at the basic markup.</p>
+                    </div>
+                </div><!-- .grid -->
+
+<!-- CODE EXAMPLE -->
+<pre class="chl chl-html"><span class="chl-comment"> Footer </span>
+<tag>footer <attr class="is-id">id="<span class="chl-attr-val">anita-footer</span>"</attr></tag>
+    <tag>div <attr class="is-class">class="<span class="chl-attr-val">anita-footer-inner</span>"</attr></tag>
+        <tag>div <attr>class="anita-copyright anita-js-copyright"</attr></tag><tag>/div</tag>
+        <tag>div <attr>class="anita-socials anita-js-socials"</attr></tag><tag>/div</tag>
+    <tag>/div</tag>
+<tag>/footer</tag>
+</pre>
+<!-- // CODE EXAMPLE -->
+                <p class="bottom-gap--m">That is actually all markup if you prefer to use generated copyright and social links for all website pages. The key classes for generator features are <span class="chl-attr-val">anita-js-copyright</span> and <span class="chl-attr-val">anita-js-socials</span>. If you have no plans to use the procedural generation - remove those classes.</p>
+                
+                <h6>Copyright Text</h6>
+                <p>The copyright text is placed in the <span class="chl-css-attr">l10n</span> parameter of the config inside the file <span class="anita-highlight">js/core.js</span>. So, you can easily find it there:</p>
+<!-- CODE EXAMPLE -->
+<pre class="chl chl-css">...
+    <span class="chl-comment"> --- Localization --- </span>
+    <attr class="is-spec">l10n</attr> : {
+        <span class="chl-js-comment">// Footer Copyright string</span>
+        <attr class="is-spec">copyright</attr> : <span class="chl-css-attr-n">'Copyright &copy; 2022. All Rights Reserved.'</span>,
+        ...
+    }
+...</pre>
+<!-- // CODE EXAMPLE -->
+                <p class="bottom-gap--m">If you want to stay true to the classics, you can remove the class <span class="chl-attr-val">anita-js-copyright</span> and write your text directly in <code class="chl chl-inline chl-html"><tag>div <attr>class="anita-copyright"</attr></tag><tag>/div</tag></code>.</p>
+                
+                <h6>Social Links</h6>
+                <p>As for the social links. When you use the <span class="chl-attr-val">anita-js-socials</span>, they automatically append to the <code class="chl chl-inline chl-html"><tag>div <attr>class="anita-socials"</attr></tag><tag>/div</tag></code> according to the config in <span class="anita-highlight">js/core.js</span>:</p>
+
+<!-- CODE EXAMPLE -->
+<pre class="chl chl-css">...
+
+<span class="chl-comment"> --- Social Links --- </span>
+<attr class="is-spec">socials</attr>: {
+    <span class="chl-css-attr-n">'facebook'</span> : {
+        <span class="chl-css-attr-n">'url'</span>: <span class="chl-css-attr-n">'#'</span>,
+        <span class="chl-css-attr-n">'label'</span>: <span class="chl-css-attr-n">'Fb.'</span>
+    },
+    <span class="chl-css-attr-n">'twitter'</span> : {
+        <span class="chl-css-attr-n">'url'</span>: <span class="chl-css-attr-n">'#'</span>,
+        <span class="chl-css-attr-n">'label'</span>: <span class="chl-css-attr-n">'Tw.'</span>
+    },
+    <span class="chl-css-attr-n">'instagram'</span> : {
+        <span class="chl-css-attr-n">'url'</span>: <span class="chl-css-attr-n">'#'</span>,
+        <span class="chl-css-attr-n">'label'</span>: <span class="chl-css-attr-n">'In.'</span>
+    },
+    <span class="chl-css-attr-n">'youtube'</span> : {
+        <span class="chl-css-attr-n">'url'</span>: <span class="chl-css-attr-n">'#'</span>,
+        <span class="chl-css-attr-n">'label'</span>: <span class="chl-css-attr-n">'Yt.'</span>
+    }
+},
+
+...</pre>
+<!-- // CODE EXAMPLE -->
+
+                <p>The parent param of each item is the label of the social network, and also will be used as a part of the class for this item. Due to that, the requirements for that param are the same as for the class name: <span class="anita-highlight">no dots, commas spaces, and other special symbols</span>. For example, for the value <span class="chl-css-attr-n">facebook</span> the item class will be <span class="chl-attr-val">anita-socials--facebook</span>.</p>
+                <p>Next, inside this we add two additional params: <span class="anita-highlight">URL</span> and the <span class="anita-highlight">displayed label</span>. The <span class="chl-css-attr-n">label</span> param is optional and you can leave it empty, if have plans to use custom styles, for example, with icons. By the way, you can customize it using the classes <span class="chl-attr-val">anita-socials--<i>parentParam</i></span>.</p>
+                <p>This trick with the <span class="chl-attr-val">anita-js-socials</span> works not only in the <code class="chl chl-inline chl-html"><tag>footer</tag></code>. You can also use it to place your social links inside any block you need. An example of usage can see on the Contacts page.</p>
+                <p>But if you need to use the hardcoded version, you can use the following markup to do so:</p>
+
+<!-- CODE EXAMPLE -->
+<pre class="chl chl-html bottom-gap--m">
+        ...
+        <tag class="chl-fade">div <attr>class="anita-socials"</attr></tag>
+            <tag>ul <attr>class="anita-socials-list"</attr></tag>
+                <tag>li <attr>class="anita-socials--facebook"</attr></tag>
+                    <tag>a <attr>href="#"</attr></tag>Fb.<tag>/a</tag>
+                <tag>/li</tag>
+                <tag>li <attr>class="anita-socials--twitter"</attr></tag>
+                    <tag>a <attr>href="#"</attr></tag>Tw.<tag>/a</tag>
+                <tag>/li</tag>
+                <tag>li <attr>class="anita-socials--instagram"</attr></tag>
+                    <tag>a <attr>href="#"</attr></tag>In.<tag>/a</tag>
+                <tag>/li</tag>
+                <tag>li <attr>class="anita-socials--youtube"</attr></tag>
+                    <tag>a <attr>href="#"</attr></tag>Yt.<tag>/a</tag>
+                <tag>/li</tag>
+            <tag>/ul</tag>
+        <span class="chl-fade"><tag>/div</tag>
+    <tag>/div</tag>
+<tag>/footer</tag>
+</span>
+</pre>
+<!-- // CODE EXAMPLE -->
+
+                <p></p>
+            </section>
+
+            <!-- Section: Next Chapter  -->
+            <section class="anita-section">
+                <div class="anita-cta" data-aos="fade-up">
+                    <h4>
+                        Next Chapter
+                    </h4>
+                    <div class="anita-caption">
+                        <a href="options.html" class="anita-underline">Options and Settings</a>
+                    </div>
+                </div><!-- .anita-cta -->
+            </section>
+        </div>
+    </main>
+
+    <!-- Spotlight -->
+    <div class="anita-spotlight"></div>
+
+    <!-- JS Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../js/anita.js"></script>
+</body>

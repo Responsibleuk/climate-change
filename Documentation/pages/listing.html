@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Page Title -->
+    <title>Anita | Creative Photography</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600;800&family=Rajdhani:wght@700&family=Roboto+Mono&display=swap" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="../css/config.css">
+    <link type="text/css" rel="stylesheet" href="../css/anita.css">
+
+    <!-- Favicon -->
+    <link rel="icon" href="../img/favicon.png" sizes="32x32" />
+</head>
+<body data-barba="wrapper">
+    <!-- Navigation -->
+    <div class="anita-navigation-wrap">
+        <nav class="anita-nav">
+            <ul class="anita-menu">
+                <li>
+                    <a href="../index.html"><sup>01</sup> Welcome</a>
+                </li>
+                <li>
+                    <a href="overview.html"><sup>02</sup> Overview</a>
+                </li>
+                <li>
+                    <a href="structure.html"><sup>03</sup> HTML Structure</a>
+                </li>
+                <li>
+                    <a href="header.html"><sup>04</sup> Header and Menu</a>
+                </li>
+                <li>
+                    <a href="footer.html"><sup>05</sup> Footer and Socials</a>
+                </li>
+                <li>
+                    <a href="options.html"><sup>06</sup> Options and Settings</a>
+                </li>
+                <li>
+                    <a href="content.html"><sup>07</sup> Content and Grid</a>
+                </li>
+                <li>
+                    <a href="elements.html"><sup>08</sup> Content Elements</a>
+                </li>
+                <li class="is-active">
+                    <a href="listing.html"><sup>09</sup> Albums Listing</a>
+                </li>
+                <li>
+                    <a href="albums.html"><sup>10</sup> Album Posts</a>
+                </li>
+                <li>
+                    <a href="contact.html"><sup>11</sup> Contact Form</a>
+                </li>
+                <li>
+                    <a href="customize.html"><sup>12</sup> Style Customization</a>
+                </li>
+                <li>
+                    <a href="credits.html"><sup>13</sup> Credits</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    
+    <main data-barba="container" data-barba-namespace="intro">
+        <!-- Content -->
+        <div class="anita-container">
+
+            <!-- SECTION: Albums Listing -->
+            <section>
+                <div class="grid grid--33-66 bottom-gap--s">
+                    <div>
+                        <h2><sup>09.</sup> Albums Listing</h2>
+                    </div>
+                    <div>
+                        In this section, we'll learn how to create album listing galleries in different layouts. Without a long foreword, let's jump in into the code instances and options review.
+                    </div>
+                </div><!-- .grid -->
+                <p class="bottom-gap--m">All fullscreen album listing layouts are placed directly into the <code class="chl chl-inline chl-html"><tag>main <attr>class="anita-main"</attr>/</tag></code> tag without the <code class="chl chl-inline chl-html"><tag>div <attr>class="anita-container"</attr>/</tag></code> wrapper. The only exception is the <span class="anita-highlight">Classic Grid</span> layout, which we'll cover in detail at the end.</p>
+<!-- WebGL Carousel -->
+                <h6>WebGL Carousel Gallery</h6>
+                <!-- CODE EXAMPLE -->
+<pre class="chl chl-html">
+<span class="chl-comment"> Page Main </span>
+<tag>main <attr>class="anita-main"</attr></tag>
+    <span class="chl-comment"> WebGL Carousel Gallery </span>
+    <tag>div <attr>class="anita-gl-container-wrap anita-albums-listing anita-gl-carousel-gallery-wrap anita-scrollEW"</attr></tag>
+        <tag>div <attr>class="anita-gl-container anita-gl-carousel-gallery"</attr> <attr>data-prev-label="Previous Work"</attr> <attr>data-next-label="Next Work"</attr></tag>
+            <span class="chl-comment"> Gallery Item (Video Example) </span>
+            <tag>div <attr>class="anita-gl-gallery-item is-video"</attr> <attr>data-src="video/album01_cover.mp4"</attr> <attr>data-size="1280x720"</attr></tag>
+                <tag>div <attr>class="anita-gl-gallery-item__content"</attr></tag>
+                    <tag>span <attr>class="anita-meta anita-gl-gallery__meta"</attr></tag>Category<tag>/span</tag>
+                    <tag>h2 <attr>class="anita-gl-gallery__caption"</attr></tag>
+                        <tag>sup</tag>01.<tag>/sup</tag>Gallery Title
+                    <tag>/h2</tag>
+                    <tag>span <attr>class="anita-gl-gallery__explore"</attr></tag>Explore<tag>/span</tag>
+                    <tag>a <attr>href="album-name.html"</attr> <attr>class="anita-album-link"</attr></tag><tag>/a</tag>
+                <tag>/div</tag>
+            <tag>/div</tag>
+            <span class="chl-comment"> Gallery Item (Image Example) </span>
+            <tag>div <attr>class="anita-gl-gallery-item is-image"</attr> <attr>data-src="img/album02_cover.jpg"</attr> <attr>data-size="1440x1080"</attr></tag>
+                <tag>div <attr>class="anita-gl-gallery-item__content"</attr></tag>
+                    <tag>span <attr>class="anita-meta anita-gl-gallery__meta"</attr></tag>Category<tag>/span</tag>
+                    <tag>h2 <attr>class="anita-gl-gallery__caption"</attr></tag>
+                        <tag>sup</tag>02.<tag>/sup</tag>Gallery Title
+                    <tag>/h2</tag>
+                    <tag>span <attr>class="anita-gl-gallery__explore"</attr></tag>Explore<tag>/span</tag>
+                    <tag>a <attr>href="album-name.html"</attr> <attr>class="anita-album-link"</attr></tag><tag>/a</tag>
+                <tag>/div</tag>
+            <tag>/div</tag>
+            <span class="chl-comment"> Gallery Item </span>
+            ...
+        <tag>/div</tag>
+    <tag>/div</tag>
+<tag>/main</tag></pre>
+                <!-- // CODE EXAMPLE -->
+                <p>Inside the gallery tag, <span class="chl-attr">data-prev-label</span> and <span class="chl-attr">data-next-label</span> attributes are used to specify labels that show after hovering the navigation buttons.</p>
+                <p class="bottom-gap--m">In the gallery item tag <code class="chl chl-inline chl-html"><tag>div <attr>class="anita-gl-gallery-item"</attr>/</tag></code>, you should specify the slide type using the class <span class="chl-attr-val">is-video</span> or <span class="chl-attr-val">is-image</span> for video or image slide type. In the <span class="chl-attr">data-src</span> attribute, you should define the URL to the slide's image or video file. And finally, in the <span class="chl-attr">data-size</span> attribute, you should specify the original image (or video) size in pixels, in the way "<span class="anita-highlight">width</span> x <span class="anita-highlight">height</span>".</p>
+
+<!-- WebGL Roll Carousel -->
+                <h6>Roll WebGL Carousel</h6>
+                <!-- CODE EXAMPLE -->
+<pre class="chl chl-html">
+<span class="chl-comment"> Page Main </span>
+<tag>main <attr>class="anita-main"</attr></tag>
+    <span class="chl-comment"> WebGL Roll Carousel </span>
+    <tag>div <attr>class="anita-gl-container-wrap anita-albums-listing anita-gl-roll-gallery-wrap anita-scrollNS"</attr></tag>
+        <tag>div <attr>class="anita-gl-container anita-gl-roll-gallery"</attr> <attr>data-prev-label="Previous Work"</attr> <attr>data-next-label="Next Work"</attr></tag>
+            <span class="chl-comment"> Gallery Item (Video Example) </span>
+            <tag>div <attr>class="anita-gl-gallery-item is-video"</attr> <attr>data-src="video/album01_cover.mp4"</attr> <attr>data-size="1280x720"</attr></tag>
+                <tag>div <attr>class="anita-gl-gallery-item__content"</attr></tag>
+                    <tag>span <attr>class="anita-meta anita-gl-gallery__meta"</attr></tag>Category<tag>/span</tag>
+                    <tag>h2 <attr>class="anita-gl-gallery__caption"</attr></tag>
+                        <tag>sup</tag>01.<tag>/sup</tag>Gallery Title
+                    <tag>/h2</tag>
+                    <tag>span <attr>class="anita-gl-gallery__explore"</attr></tag>Explore<tag>/span</tag>
+                    <tag>a <attr>href="album-name.html"</attr> <attr>class="anita-album-link"</attr></tag><tag>/a</tag>
+                <tag>/div</tag>
+            <tag>/div</tag>
+            <span class="chl-comment"> Gallery Item (Image Example) </span>
+            <tag>div <attr>class="anita-gl-gallery-item is-image"</attr> <attr>data-src="img/album02_cover.jpg"</attr> <attr>data-size="1440x1080"</attr></tag>
+                <tag>div <attr>class="anita-gl-gallery-item__content"</attr></tag>
+                    <tag>span <attr>class="anita-meta anita-gl-gallery__meta"</attr></tag>Category<tag>/span</tag>
+                    <tag>h2 <attr>class="anita-gl-gallery__caption"</attr></tag>
+                        <tag>sup</tag>02.<tag>/sup</tag>Gallery Title
+                    <tag>/h2</tag>
+                    <tag>span <attr>class="anita-gl-gallery__explore"</attr></tag>Explore<tag>/span</tag>
+                    <tag>a <attr>href="album-name.html"</attr> <attr>class="anita-album-link"</attr></tag><tag>/a</tag>
+                <tag>/div</tag>
+            <tag>/div</tag>
+            <span class="chl-comment"> Gallery Item </span>
+            ...
+        <tag>/div</tag>
+    <tag>/div</tag>
+<tag>/main</tag></pre>
+                <!-- // CODE EXAMPLE -->
+                <p class="bottom-gap--m">As you can see, the main differences between this and previous galleries are only in wrapper classes. The slide HTML is all the same with the same rules and options.</p>
+
+<!-- WebGL Slider -->
+                <h6>WebGL Slider Gallery</h6>
+                <!-- CODE EXAMPLE -->
+<pre class="chl chl-html">
+<span class="chl-comment"> Page Main </span>
+<tag>main <attr>class="anita-main"</attr></tag>
+    <span class="chl-comment"> WebGL Slider Gallery </span>
+    <tag>div <attr>class="anita-gl-container-wrap anita-albums-listing anita-gl-slider-gallery-wrap anita-scrollEW"</attr></tag>
+        <tag>div <attr>class="anita-gl-container anita-gl-slider-gallery"</attr> <attr>data-type="fade"</attr> <attr>data-fit="cover"</attr> <attr>data-intensity="0.5"</attr> 
+        <attr>data-prev-label="Previous Work"</attr> <attr>data-next-label="Next Work"</attr></tag>
+            <span class="chl-comment"> Gallery Item (Video Example) </span>
+            <tag>div <attr>class="anita-gl-gallery-item is-video"</attr> <attr>data-src="video/album01_cover.mp4"</attr> <attr>data-size="1280x720"</attr></tag>
+                <tag>div <attr>class="anita-gl-gallery-item__content"</attr></tag>
+                    <tag>span <attr>class="anita-meta anita-gl-gallery__meta"</attr></tag>Category<tag>/span</tag>
+                    <tag>h2 <attr>class="anita-gl-gallery__caption"</attr></tag>
+                        <tag>sup</tag>01.<tag>/sup</tag>Gallery Title
+                    <tag>/h2</tag>
+                    <tag>span <attr>class="anita-gl-gallery__explore"</attr></tag>Explore<tag>/span</tag>
+                    <tag>a <attr>href="album-name.html"</attr> <attr>class="anita-album-link"</attr></tag><tag>/a</tag>
+                <tag>/div</tag>
+            <tag>/div</tag>
+            <span class="chl-comment"> Gallery Item (Image Example) </span>
+            <tag>div <attr>class="anita-gl-gallery-item is-image"</attr> <attr>data-src="img/album02_cover.jpg"</attr> <attr>data-size="1440x1080"</attr></tag>
+                <tag>div <attr>class="anita-gl-gallery-item__content"</attr></tag>
+                    <tag>span <attr>class="anita-meta anita-gl-gallery__meta"</attr></tag>Category<tag>/span</tag>
+                    <tag>h2 <attr>class="anita-gl-gallery__caption"</attr></tag>
+                        <tag>sup</tag>02.<tag>/sup</tag>Gallery Title
+                    <tag>/h2</tag>
+                    <tag>span <attr>class="anita-gl-gallery__explore"</attr></tag>Explore<tag>/span</tag>
+                    <tag>a <attr>href="album-name.html"</attr> <attr>class="anita-album-link"</attr></tag><tag>/a</tag>
+                <tag>/div</tag>
+            <tag>/div</tag>
+            <span class="chl-comment"> Gallery Item </span>
+            ...
+        <tag>/div</tag>
+    <tag>/div</tag>
+<tag>/main</tag></pre>
+                <!-- // CODE EXAMPLE -->
+                <p>Here we have new attributes. Let's take a look at them. The <span class="chl-attr">data-type</span> attribute is responsible for the effect with which the slides will change. It can take one of 4 values: <span class="chl-attr-val">fade</span> for fading slide transition, <span class="chl-attr-val">parallax</span> for parallax transition, <span class="chl-attr-val">pixel</span> for pixel storm transition, and <span class="chl-attr-val">sliced</span> for the diagonally sliced transition.</p>
+                <p>The <span class="chl-attr">data-fit</span> attribute can be used to change the fit type. You can use one of two values: <span class="chl-attr-val">cover</span> to cover the entire screen with the media, and <span class="chl-attr-val">fit</span> to fit the media on the screen in its original proportions.</p>
+                <p>And finally, the <span class="chl-attr">data-intensity</span> attribute is responsible for the intensity of the transition effect. This option is not compatible with the <span class="chl-attr-val">sliced</span> gallery type.</p>
+                <p class="bottom-gap--m">As for the gallery item, it is the same as in previous cases.</p>
+
+<!-- Flat Carousel -->
+                <h6>Flat Carousel</h6>
+                <!-- CODE EXAMPLE -->
+<pre class="chl chl-html">
+<span class="chl-comment"> Page Main </span>
+<tag>main <attr>class="anita-main"</attr></tag>
+    <span class="chl-comment"> Flat Carousel Gallery </span>
+    <tag>div <attr>class="anita-carousel-gallery-wrap anita-scrollEW"</attr></tag>
+        <tag>div <attr>class="anita-albums-listing anita-flat-carousel anita-carousel-gallery"</attr> <attr>data-prev-label="Previous Work"</attr> <attr>data-next-label="Next Work"</attr></tag>
+            <span class="chl-comment"> Gallery Item (Video Example) </span>
+            <tag>div <attr>class="anita-gallery-item is-video"</attr> <attr>data-type="video"</attr></tag>
+                <tag>video <attr>src="video/albums/album01.mp4"</attr> <attr>playsinline</attr> <attr>muted</attr> <attr>loop</attr></tag></attr><tag>/video</tag>
+                <tag>div <attr>class="anita-gallery-item__content"</attr></tag>
+                    <tag>span <attr>class="anita-meta anita-gallery__meta"</attr></tag>Category<tag>/span</tag>
+                    <tag>h2 <attr>class="anita-gallery__caption"</attr></tag>
+                        <tag>sup</tag>01.<tag>/sup</tag>Gallery Title
+                    <tag>/h2</tag>
+                    <tag>span <attr>class="anita-gallery__explore"</attr></tag>Explore<tag>/span</tag>
+                    <tag>a <attr>href="album-name.html"</attr> <attr>class="anita-album-link"</attr></tag><tag>/a</tag>
+                <tag>/div</tag>
+            <tag>/div</tag>
+            <span class="chl-comment"> Gallery Item (Image Example) </span>
+            <tag>div <attr>class="anita-gallery-item is-image"</attr> <attr>data-type="image"</attr></tag>
+                <tag>img <attr>src="img/null.png"</attr> <attr>class="anita-lazy"</attr> <attr>data-src="img/album02_cover.jpg"</attr> <attr>alt="Gallery Title"</attr> <attr class="chl-imp">width="1440"</attr> <attr class="chl-imp">height="1080"</attr></tag>
+                <tag>div <attr>class="anita-gallery-item__content"</attr></tag>
+                    <tag>span <attr>class="anita-meta anita-gallery__meta"</attr></tag>Category<tag>/span</tag>
+                    <tag>h2 <attr>class="anita-gallery__caption"</attr></tag>
+                        <tag>sup</tag>02.<tag>/sup</tag>Gallery Title
+                    <tag>/h2</tag>
+                    <tag>span <attr>class="anita-gallery__explore"</attr></tag>Explore<tag>/span</tag>
+                    <tag>a <attr>href="album-name.html"</attr> <attr>class="anita-album-link"</attr></tag><tag>/a</tag>
+                <tag>/div</tag>
+            <tag>/div</tag>
+            <span class="chl-comment"> Gallery Item </span>
+            ...
+        <tag>/div</tag>
+    <tag>/div</tag>
+<tag>/main</tag></pre>
+                <!-- // CODE EXAMPLE -->
+                <p class="bottom-gap--m">As you can see, the gallery item part is a little bit different from previous cases. There is no <span class="chl-attr">data-src</span> attribute on the gallery item parent. Instead of that, the <code class="chl chl-inline chl-html"><tag>video/</tag></code> and the <code class="chl chl-inline chl-html"><tag>image</tag></code> are placed by itself. The image uses the lazy loading feature and has requirements as in the Grid Gallery element that we have talked about in the <a href="elements.html">Content Elements</a> section.</p>
+
+<!-- Classic Grid -->
+                <h6>Classic Grid</h6>
+                <!-- CODE EXAMPLE -->
+<pre class="chl chl-html">
+<span class="chl-comment"> Page Main </span>
+...
+<tag>section <attr>class="anita-section"</attr></tag>
+    <span class="chl-comment"> Flat Carousel Gallery </span>
+    <tag>div <attr class="chl-wrap">class="anita-albums-listing anita-works-grid anita-grid-gallery anita-grid--3cols anita-zoom-hover anita-item-zoom-hover anita-item-fade-hover"</attr></tag>
+        <span class="chl-comment"> Gallery Item </span>
+        <tag>div <attr>class="anita-grid-gallery-item"</attr></tag>
+            <tag>div <attr>class="anita-grid-item__inner"</attr></tag>
+                <tag>div <attr>class="anita-grid-item__image"</attr></tag>
+                    <tag>img <attr>src="img/null.png"</attr> <attr>class="anita-lazy"</attr> <attr>data-src="img/album01_cover.jpg"</attr> <attr>alt="Gallery Title"</attr> <attr class="chl-imp">width="960"</attr> <attr class="chl-imp">height="720"</attr></tag>
+                <tag>/div</tag>
+                <tag>div <attr>class="anita-works-grid-meta anita-meta"</attr></tag>
+                    <tag>span <attr>class="anita-grid-item__category"</attr></tag>Category<tag>/span</tag>
+                    <tag>span <attr>class="anita-grid-item__count"</attr></tag>10 Photos<tag>/span</tag>
+                <tag>/div</tag>
+                <tag>h5</tag>
+                    Gallery Title
+                <tag>/h5</tag>
+                <tag>a <attr>href="album-name.html"</attr></tag><tag>/a</tag>
+            <tag>/div</tag>
+        <tag>/div</tag>
+        <span class="chl-comment"> Gallery Item </span>
+        ...
+    <tag>/div</tag>
+<tag>/section</tag></pre>
+                <!-- // CODE EXAMPLE -->
+                <p>Here the classes and options are pretty close to the Grid Gallery element that we have talked about in the <a href="elements.html">Content Elements</a> section. But for the parent tag, there is one more hover effect class. Let's take a deep:</p>
+                <div class="grid grid--33-66">
+                    <ul class="anita-list">
+                        <li><span class="anita-highlight">Number of Columns</span></li>
+                        <li><span class="chl-attr-val">anita-grid--2cols</span> - 2 columns grig gallery</li>
+                        <li><span class="chl-attr-val">anita-grid--3cols</span> - 3 columns grig gallery</li>
+                        <li><span class="chl-attr-val">anita-grid--4cols</span> - 4 columns grig gallery</li>
+                    </ul>
+                    <ul class="anita-list">
+                        <li><span class="anita-highlight">Hover Effects</span></li>
+                        <li><span class="chl-attr-val">anita-zoom-hover</span> - zooming in inner image inside the gallery item.</li>
+                        <li><span class="chl-attr-val">anita-item-zoom-hover</span> - zooming in the gallery item.</li>
+                        <li><span class="chl-attr-val">anita-item-fade-hover</span> - fade out all items and highlight the hover item.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Section: Next Chapter  -->
+            <section class="anita-section">
+                <div class="anita-cta" data-aos="fade-up">
+                    <h4>
+                        Next Chapter
+                    </h4>
+                    <div class="anita-caption">
+                        <a href="albums.html" class="anita-underline">Album Posts</a>
+                    </div>
+                </div><!-- .anita-cta -->
+            </section>
+        </div>
+    </main>
+
+    <!-- Spotlight -->
+    <div class="anita-spotlight"></div>
+
+    <!-- JS Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../js/anita.js"></script>
+</body>

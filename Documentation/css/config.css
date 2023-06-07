@@ -1,0 +1,167 @@
+/**
+ * Author: Shadow Themes
+ * Author URL: https://shadow-themes.com
+ */
+
+:root {
+    /* --- Theme Color Scheme --- */
+    --anita-s-bg-body: #0E0E10;
+    --anita-s-spotlight01: #84ABD5;
+    --anita-s-spotlight02: #FFEBD3;
+    --anita-s-heading: #E6E6E6;
+    --anita-s-content: #A6A6A6;
+    --anita-s-meta: #E6E6E6C0;
+    --anita-s-bg-container: #212224;
+
+    --anita-s-cursor: var(--anita-s-heading);
+    --anita-s-link: var(--anita-s-heading);
+    --anita-s-link-hover: var(--anita-s-heading);
+
+    /* Main Menu */
+    --anita-s-menu-link: #E6E6E6B3;
+    --anita-s-menu-link-hover: #E6E6E6;
+    --anita-s-menu-link-active: #E6E6E6;
+
+    /* --- Footer Links --- */
+    --anita-s-footer-text: var(--anita-s-heading);
+    --anita-s-footer-link: var(--anita-s-heading);
+    --anita-s-footer-link-hover: var(--anita-s-heading);
+
+    /* --- Opacity Values --- */
+    --anita-o-heading-sup: 0.25;
+
+    /* --- Typography Values --- */
+    --anita-t-heading-ff: 'Rajdhani', sans-serif;
+    --anita-t-content-ff: 'Open Sans', sans-serif;
+
+    --anita-t-title-fs: 96px;
+    --anita-t-caption-fs: 64px;
+    --anita-t-h1-fs: 64px;
+    --anita-t-h2-fs: 45px;
+    --anita-t-h3-fs: 40px;
+    --anita-t-h4-fs: 33px;
+    --anita-t-h5-fs: 28px;
+    --anita-t-h6-fs: 24px;
+    --anita-t-heading-lh: 1.25em;
+    --anita-t-heading-fw: 700;
+
+    --anita-t-h1-spacing: 0.7em;
+    --anita-t-h2-spacing: 0.75em;
+    --anita-t-h3-spacing: 0.85em;
+    --anita-t-h4-spacing: 1em;
+    --anita-t-h5-spacing: 0.5em;
+    --anita-t-h6-spacing: 0.75em;
+
+    --anita-t-content-fs: 16px;
+    --anita-t-content-lh: 1.8em;
+    --anita-t-content-fw: 600;
+    --anita-t-content-strong-fw: 800;
+
+    --anita-t-meta-fs: 14px;
+    --anita-t-fullscreen-menu-fs: 64px;
+    --anita-t-fullscreen-sub-menu-fs: 16px;
+    --anita-t-text-menu-fs: 14px;
+    --anita-t-sub-menu-fs: 14px;
+    --anita-t-footer-fs: 14px;
+
+    --anita-t-label-fs: 12px;
+    --anita-t-input-fs: 14px;
+    --anita-t-button-fs: 18px;
+
+    /* --- Container, Spacings, Borders, Sizes --- */
+    --anita-container-width: 1280px;
+    --anita-container-top-spacing: 160px;
+    --anita-container-bottom-spacing: 160px;
+    --anita-grid-gap: 40px;
+    --anita-grid-small-gap: 20px;
+    --anita-section-gap: 160px;
+    --anita-bottom-gap-xsmall: 20px;
+    --anita-bottom-gap-small: 40px;
+    --anita-bottom-gap-medium: 80px;
+    --anita-bottom-gap-large: 120px;
+    --anita-header-spacing: 40px 50px 40px 50px;
+    --anita-button-border-style: solid;
+    --anita-button-border-width: 2px;
+    --anita-button-padding: 17px 32px 17px 32px;
+    --anita-footer-spacing: 41px 50px 42px 50px;
+}
+
+/* --- Laptop --- */
+@media only screen and (max-width: 1366px) {
+    :root {
+        --anita-container-width: 1100px;
+        --anita-container-top-spacing: 160px;
+        --anita-container-bottom-spacing: 140px;
+        --anita-section-gap: 160px;
+
+        --anita-t-title-fs: 80px;
+        --anita-t-caption-fs: 48px;
+        --anita-t-h1-fs: 50px;
+        --anita-t-h2-fs: 40px;
+        --anita-t-h3-fs: 35px;
+        --anita-t-h4-fs: 30px;
+        --anita-t-h5-fs: 24px;
+        --anita-t-h6-fs: 20px;
+        --anita-t-fullscreen-menu-fs: 48px;
+
+        --anita-header-spacing: 30px 50px 30px 50px;
+        --anita-footer-spacing: 31px 50px 32px 50px;
+    }
+}
+
+/* --- Tablet: Landscape --- */
+@media only screen and (max-width: 1200px) {
+    :root {
+        --anita-container-width: 940px;
+        --anita-grid-gap: 30px;
+
+        --anita-t-title-fs: 64px;
+        --anita-t-caption-fs: 40px;
+        --anita-t-h1-fs: 40px;
+        --anita-t-h2-fs: 36px;
+        --anita-t-h3-fs: 32px;
+        --anita-t-h4-fs: 28px;
+        --anita-t-h5-fs: 24px;
+        --anita-t-h6-fs: 20px;
+        --anita-t-fullscreen-menu-fs: 40px;
+
+        --anita-header-spacing: 30px 30px 30px 30px;
+        --anita-footer-spacing: 31px 30px 32px 30px;
+    }
+}
+
+/* --- Tablet: Portrait --- */
+@media only screen and (max-width: 960px) {
+    :root {
+        --anita-container-width: calc(100vw - 2 * var(--anita-grid-gap));
+
+        --anita-t-title-fs: 48px;
+        --anita-t-caption-fs: 40px;
+        --anita-t-h1-fs: 32px;
+        --anita-t-h2-fs: 28px;
+        --anita-t-h3-fs: 26px;
+        --anita-t-h4-fs: 24px;
+        --anita-t-h5-fs: 20px;
+        --anita-t-h6-fs: 18px;
+        --anita-t-fullscreen-menu-fs: 32px;
+    }
+}
+
+/* --- Mobile Phones --- */
+@media only screen and (max-width: 739px) {
+    :root {
+        --anita-container-bottom-spacing: 100px;
+
+        --anita-grid-gap: 20px;
+        --anita-bottom-gap-small: 20px;
+        --anita-bottom-gap-medium: 40px;
+        --anita-bottom-gap-large: 60px;
+        --anita-section-gap: 80px;
+
+        --anita-t-title-fs: 36px;
+        --anita-t-caption-fs: 32px;
+
+        --anita-header-spacing: 20px 20px 20px 20px;
+        --anita-footer-spacing: 19px 20px 18px 20px;
+    }
+}

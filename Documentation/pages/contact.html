@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Page Title -->
+    <title>Anita | Creative Photography</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600;800&family=Rajdhani:wght@700&family=Roboto+Mono&display=swap" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="../css/config.css">
+    <link type="text/css" rel="stylesheet" href="../css/anita.css">
+
+    <!-- Favicon -->
+    <link rel="icon" href="../img/favicon.png" sizes="32x32" />
+</head>
+<body data-barba="wrapper">
+    <!-- Navigation -->
+    <div class="anita-navigation-wrap">
+        <nav class="anita-nav">
+            <ul class="anita-menu">
+                <li>
+                    <a href="../index.html"><sup>01</sup> Welcome</a>
+                </li>
+                <li>
+                    <a href="overview.html"><sup>02</sup> Overview</a>
+                </li>
+                <li>
+                    <a href="structure.html"><sup>03</sup> HTML Structure</a>
+                </li>
+                <li>
+                    <a href="header.html"><sup>04</sup> Header and Menu</a>
+                </li>
+                <li>
+                    <a href="footer.html"><sup>05</sup> Footer and Socials</a>
+                </li>
+                <li>
+                    <a href="options.html"><sup>06</sup> Options and Settings</a>
+                </li>
+                <li>
+                    <a href="content.html"><sup>07</sup> Content and Grid</a>
+                </li>
+                <li>
+                    <a href="elements.html"><sup>08</sup> Content Elements</a>
+                </li>
+                <li>
+                    <a href="listing.html"><sup>09</sup> Albums Listing</a>
+                </li>
+                <li>
+                    <a href="albums.html"><sup>10</sup> Album Posts</a>
+                </li>
+                <li class="is-active">
+                    <a href="contact.html"><sup>11</sup> Contact Form</a>
+                </li>
+                <li>
+                    <a href="customize.html"><sup>12</sup> Style Customization</a>
+                </li>
+                <li>
+                    <a href="credits.html"><sup>13</sup> Credits</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    
+    <main data-barba="container" data-barba-namespace="intro">
+        <!-- Content -->
+        <div class="anita-container">
+            <!-- SECTION: Album Posts -->
+            <section>
+                <div class="grid grid--33-66 bottom-gap--s">
+                    <div>
+                        <h2><sup>11.</sup> Contact Form</h2>
+                    </div>
+                    <div>
+                        In this section, we'll learn how to create the basic contact form, and how to set it send mail to your email address using the <span class="anita-highlight">mail.php</span> file. Here is a basic form markup:
+                    </div>
+                </div><!-- .grid -->
+                <!-- CODE EXAMPLE -->
+<pre class="chl chl-html">
+<span class="chl-comment"> Contact Form </span>
+<tag>div <attr>class="anita-contact-form-wrap"</attr></tag>
+    <tag>form <attr>action="mail.php"</attr> <attr>method="post"</attr> <attr>class="anita-contact-form"</attr> <attr>data-fill-error="Please, fill out the contact form."</attr></tag>
+        <tag>div <attr>class="anita-grid anita-grid-small-gap anita-grid--3cols anita-grid--tablet-1col"</attr></tag>
+            <tag>input <attr>type="text"</attr> <attr>id="name"</attr> <attr>name="name"</attr> <attr>placeholder="Your Name"</attr> <attr>required</attr></tag>
+            <tag>input <attr>type="email"</attr> <attr>id="email"</attr> <attr>name="email"</attr> <attr>placeholder="Your Email"</attr> <attr>required</attr></tag>
+            <tag>input <attr>type="tel"</attr> <attr>id="phone"</attr> <attr>name="phone"</attr> <attr>placeholder="Your Phone"</attr> <attr>required</attr></tag>
+        <tag>/div</tag>
+        <tag>textarea <attr>id="message"</attr> <attr>name="message"</attr> <attr>placeholder="Your Message"</attr> <attr>required</attr></tag><tag>/textarea</tag>
+        <tag>div <attr>class="anita-contact-form__footer"</attr></tag>
+            <tag>div <attr>class="anita-contact-form__submit"</attr></tag>
+                <tag>input <attr>type="submit"</attr> <attr>value="Send Message"</attr></tag>
+            <tag>/div</tag>
+            <tag>div <attr>class="anita-contact-form__response"</attr></tag><tag>/div</tag>
+        <tag>/div</tag>
+    <tag>/form</tag>
+<tag>/div</tag></pre>
+                <!-- // CODE EXAMPLE -->
+                <p>Now, to make all things work, you should edit the <span class="anita-highlight">mail.php</span> file and specify your email address in the <span class="anita-tag-class">$mail_to</span> variable.</p>
+                <!-- CODE EXAMPLE -->
+<pre class="chl chl-css"><span class="chl-fade">
+<span class="chl-css-imp-v"><span><</span>?php</span>
+<span class="chl-comment">*
+* Author: Shadow Themes
+* Author URL: https://shadow-themes.com
+</span>
+
+<sel>if <span class="chl-spec">(</span></sel><attr>$_SERVER[<span class="chl-spec">"REQUEST_METHOD"</span>]</attr> == <attr>"POST"</attr><sel><span class="chl-spec">)</span></sel> {
+
+    <span class="chl-js-comment"># Replace this email with your email address</span></span>
+    <attr>$mail_to</attr> = <span class="chl-css-attr-n">"yourmail@example.com"</span>;<span class="chl-fade">
+    
+    ...
+}
+<span class="chl-css-imp-v">?<span>></span></span></span>
+</pre>
+                <!-- // CODE EXAMPLE -->
+                <p>Please note that this is a very simple basic contact form. There is no captcha or any serious spam protection. To secure your form, you should find third-party solutions. For example, here you can find the information about the <span class="anita-highlight">reCaptcha</span> by Google <a href="https://www.google.com/recaptcha/about/">https://www.google.com/recaptcha/</a></p>
+            </section>
+
+            <!-- Section: Next Chapter  -->
+            <section class="anita-section">
+                <div class="anita-cta" data-aos="fade-up">
+                    <h4>
+                        Next Chapter
+                    </h4>
+                    <div class="anita-caption">
+                        <a href="customize.html" class="anita-underline">Template Customization</a>
+                    </div>
+                </div><!-- .anita-cta -->
+            </section>
+        </div>
+    </main>
+
+    <!-- Spotlight -->
+    <div class="anita-spotlight"></div>
+
+    <!-- JS Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>    
+    <script src="../js/anita.js"></script>
+</body>

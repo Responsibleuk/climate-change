@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Page Title -->
+    <title>Anita | Creative Photography</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600;800&family=Rajdhani:wght@700&family=Roboto+Mono&display=swap" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="../css/config.css">
+    <link type="text/css" rel="stylesheet" href="../css/anita.css">
+
+    <!-- Favicon -->
+    <link rel="icon" href="../img/favicon.png" sizes="32x32" />
+</head>
+<body data-barba="wrapper">
+    <!-- Navigation -->
+    <div class="anita-navigation-wrap">
+        <nav class="anita-nav">
+            <ul class="anita-menu">
+                <li>
+                    <a href="../index.html"><sup>01</sup> Welcome</a>
+                </li>
+                <li>
+                    <a href="overview.html"><sup>02</sup> Overview</a>
+                </li>
+                <li>
+                    <a href="structure.html"><sup>03</sup> HTML Structure</a>
+                </li>
+                <li>
+                    <a href="header.html"><sup>04</sup> Header and Menu</a>
+                </li>
+                <li>
+                    <a href="footer.html"><sup>05</sup> Footer and Socials</a>
+                </li>
+                <li>
+                    <a href="options.html"><sup>06</sup> Options and Settings</a>
+                </li>
+                <li>
+                    <a href="content.html"><sup>07</sup> Content and Grid</a>
+                </li>
+                <li class="is-active">
+                    <a href="elements.html"><sup>08</sup> Content Elements</a>
+                </li>
+                <li>
+                    <a href="listing.html"><sup>09</sup> Albums Listing</a>
+                </li>
+                <li>
+                    <a href="albums.html"><sup>10</sup> Album Posts</a>
+                </li>
+                <li>
+                    <a href="contact.html"><sup>11</sup> Contact Form</a>
+                </li>
+                <li>
+                    <a href="customize.html"><sup>12</sup> Style Customization</a>
+                </li>
+                <li>
+                    <a href="credits.html"><sup>13</sup> Credits</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    
+    <main data-barba="container" data-barba-namespace="intro">
+        <!-- Content -->
+        <div class="anita-container">
+            
+            <!-- SECTION: Content Elements -->
+            <section>
+                <div class="grid grid--33-66 bottom-gap--s">
+                    <div>
+                        <h2><sup>08.</sup> Content Elements</h2>
+                    </div>
+                    <div>
+                        In this chapter, we'll look at the main content elements included in the template, their options, and their basic functionality. You can combine these elements on the page to get the best result for your needs.
+                    </div>
+                </div><!-- .grid -->
+
+<!-- ELEMENT: Page Title -->
+                <h6>Page Title with Intro</h6>
+                <!-- CODE EXAMPLE -->
+<pre class="chl chl-html bottom-gap--m">
+<span class="chl-comment"> Page Title </span>
+<tag>section <attr>class="anita-section"</attr></tag>
+    <tag>div <attr>class="anita-page-title-wrap"</attr></tag>
+        <tag>h1 <attr>class="anita-page-title"</attr></tag>Page Title<tag>/h1</tag>
+        <tag>div <attr>class="anita-page-intro anita-offset-left--33"</attr></tag>
+            <tag>p</tag>Page intro description<tag>/p</tag>
+        <tag>/div</tag>
+    <tag>/div</tag>
+<tag>/section</tag></pre>
+                <!-- // CODE EXAMPLE -->
+
+<!-- ELEMENT: Counters -->
+                <h6>Counters</h6>
+                <!-- CODE EXAMPLE -->
+<pre class="chl chl-html">
+<span class="chl-comment"> Counter Element </span>
+<tag>div <attr>class="anita-counter"</attr> <attr class="chl-imp">data-delay="3000"</attr></tag>    
+    <tag>div <attr>class="anita-counter-number"</attr></tag>
+        99
+    <tag>/div</tag>
+    <tag>div <attr>class="anita-counter-label"</attr></tag>
+        Item Label
+    <tag>/div</tag>
+<tag>/div</tag></pre>
+                <!-- // CODE EXAMPLE -->
+                <p class="bottom-gap--m">In the <span class="chl-attr chl-imp">data-delay</span> parameter, you can set the time in milliseconds that will be passed to get to the specified number.</p>
+
+<!-- ELEMENT: Grid Gallery -->
+                <h6>Grid Gallery</h6>
+                <!-- CODE EXAMPLE -->
+<pre class="chl chl-html">
+<span class="chl-comment"> Grid Gallery </span>
+<tag>div <attr>class="anita-grid-gallery-wrapper"</attr></tag>    
+    <tag>div <attr>class="anita-grid-gallery anita-grid--2cols anita-zoom-hover"</attr></tag>
+        <span class="chl-comment"> Grid Item 01 </span>
+        <tag>div <attr>class="anita-grid-gallery-item"</attr></tag>
+            <tag>a <attr>href="img/page-about/studio01.jpg"</attr> <attr>class="anita-lightbox-link"</attr> <attr class="chl-imp">data-size="1240x830"</attr> <attr>data-gallery="studio"</attr></tag>
+                <tag>img <attr>src="img/null.png"</attr> <attr>class="anita-lazy"</attr> <attr>data-src="img/page-about/studio01.jpg"</attr> <attr>alt="Studio 01"</attr> <attr class="chl-imp">width="1240"</attr> <attr class="chl-imp">height="830"</attr></tag>
+            <tag>/a</tag>
+        <tag>/div</tag>
+        <span class="chl-comment"> Grid Item 02 </span>
+        ...
+    <tag>/div</tag>
+<tag>/div</tag></pre>
+                <!-- // CODE EXAMPLE -->
+                <p>Let's take a look at parameters, classes, and important things. In the tag <code class="chl chl-inline chl-html"><tag>div <attr>class="anita-grid-gallery"</attr>/</tag></code>, which is main grid gallery container, you can use the following additional classes:</p>
+                <div class="grid grid--33-66">
+                    <ul class="anita-list">
+                        <li><span class="anita-highlight">Number of Columns</span></li>
+                        <li><span class="chl-attr-val">anita-grid--2cols</span> - 2 columns grig gallery</li>
+                        <li><span class="chl-attr-val">anita-grid--3cols</span> - 3 columns grig gallery</li>
+                        <li><span class="chl-attr-val">anita-grid--4cols</span> - 4 columns grig gallery</li>
+                    </ul>
+                    <ul class="anita-list">
+                        <li><span class="anita-highlight">Hover Effects</span></li>
+                        <li><span class="chl-attr-val">anita-zoom-hover</span> - zooming in inner image inside the gallery item.</li>
+                        <li><span class="chl-attr-val">anita-item-zoom-hover</span> - zooming in the gallery item.</li>
+                    </ul>
+                </div>
+                <p>Inside the tag <code class="chl chl-inline chl-html"><tag>a</tag></code> in the <span class="chl-attr">href</span> attribute, you should define the URL to the large image which opens in the Lightbox. The class <span class="chl-attr-val">anita-lightbox-link</span> is required to make this link to open the Lightbox. The <span class="chl-attr">data-size</span> attribute is another required thing, where you should specify the original image size in pixels, in the way "<span class="anita-highlight">width</span> x <span class="anita-highlight">height</span>". And finally, the <span class="chl-attr">data-gallery</span> attribute is used to combine gallery items into the same gallery for the Lightbox.</p>
+                <p class="bottom-gap--m">Go to the <code class="chl chl-inline chl-html"><tag>img</tag></code>. In our template, we have implemented lazy loading for images. To mark the image as lazy loading, you should add the class <span class="chl-attr-val">anita-lazy</span>, specify the <span class="anita-highlight">URL</span> to your thumbnail image in the <span class="chl-attr">data-src</span> attribute, and set the <span class="chl-attr">src</span> attribute value to the empty image, like <span class="chl-attr-val">img/null.png</span>, which is prepacked in our template. One more required thing is to set two attributes: <span class="chl-attr">width</span> and <span class="chl-attr">height</span>.</p>
+
+<!-- ELEMENT: Cards Carousel -->
+                <h6>Cards Carousel (Team Carousel)</h6>
+                <!-- CODE EXAMPLE -->
+<pre class="chl chl-html bottom-gap--m">
+<span class="chl-comment"> Cards Carousel </span>
+<tag>div <attr>class="anita-cards-carousel-wrap"</attr></tag>    
+    <tag>div <attr>class="anita-team-carousel anita-owl-container owl-carousel owl-theme"</attr></tag>
+        <span class="chl-comment"> Card Item 01 </span>
+        <tag>div <attr>class="anita-carousel-card"</attr></tag>
+            <tag>div <attr>class="anita-carousel-card__image"</attr></tag>
+                <tag>img <attr>src="img/page-about/team01.jpg"</attr> <attr>alt="Anita Garcia"</attr></tag>
+            <tag>/div</tag>
+            <tag>div <attr>class="anita-carousel-card__content"</attr></tag>
+                <tag>div <attr>class="anita-carousel-card__heading"</attr></tag>
+                    <tag>h5</tag><tag>sup</tag>01.<tag>/sup</tag>Anita Garcia<tag>/h5</tag>
+                <tag>/div</tag>
+                <tag>div <attr>class="anita-carousel-card__caption"</attr></tag>
+                    Photographer, Founder
+                <tag>/div</tag>
+            <tag>/div</tag>
+        <tag>/div</tag>
+        <span class="chl-comment"> Card Item 02 </span>
+        ...
+    <tag>/div</tag>
+<tag>/div</tag></pre>
+                <!-- // CODE EXAMPLE -->
+
+<!-- ELEMENT: Before After -->
+                <h6>Before and After</h6>
+                <!-- CODE EXAMPLE -->
+<pre class="chl chl-html">
+<span class="chl-comment"> Before and After </span>
+<tag>div <attr>class="anita-before-after anita-scrollEW"</attr> <attr>data-image-before="img/page-about/before.jpg"</attr> <attr>data-img-after="img/page-about/after.jpg"</attr></tag>    
+    <tag>img <attr>src="img/page-about/before.jpg"</attr> <attr>alt="Photo Processing"</attr> <attr class="chl-imp">width="1920"</attr> <attr class="chl-imp">height="1200"</attr></tag>
+<tag>/div</tag></pre>
+                <!-- // CODE EXAMPLE -->
+                <p class="bottom-gap--m">For the <span class="chl-attr">data-image-before</span> attribute, you must set the URL of the source image, and for the <span class="chl-attr">data-image-after</span> attribute, you must set the URL of the final image. The URL of the source image is also used in the <span class="chl-attr">src</span> attribute of the <code class="chl chl-inline chl-html"><tag>img</tag></code> tag. As in a previous examples, <span class="chl-attr">width</span> and <span class="chl-attr">height</span> attributes are required for the <code class="chl chl-inline chl-html"><tag>img</tag></code> tag. Also, we strongly recommend using both images of the same size to avoid any visual issues.</p>
+
+<!-- ELEMENT: Price Table Item -->
+                <h6>Price Table Item</h6>
+                <!-- CODE EXAMPLE -->
+<pre class="chl chl-html bottom-gap--m">
+<span class="chl-comment"> Price Item </span>
+<tag>div <attr>class="anita-price-item"</attr> </tag>
+    <span class="chl-comment"> Price Item Head </span>
+    <tag>div <attr>class="anita-price-item--head"</attr></tag>
+        <tag>div <attr>class="anita-price-item--heading"</attr></tag>
+            Personal &amp; Portraits
+        <tag>/div</tag>
+        <tag>div <attr>class="anita-price-item--price-wrap"</attr></tag>
+            <tag>div <attr>class="anita-price-item--price-descr"</attr></tag>
+                Starting From
+            <tag>/div</tag>
+            <tag>div <attr>class="anita-price-item--price"</attr></tag>
+                $149.99
+            <tag>/div</tag>
+        <tag>/div</tag>
+    <tag>/div</tag>
+    <span class="chl-comment"> Price Item Content </span>
+    <tag>div <attr>class="anita-price-item--content"</attr></tag>
+        <tag>div <attr>class="anita-price-item--list-heading"</attr></tag>
+            What is included
+        <tag>/div</tag>
+        <tag>ul <attr>class="anita-price-item--list"</attr></tag>
+            <tag>li</tag>
+                30 minutes session
+            <tag>/li</tag>
+            <tag>li</tag>
+                Make-up artist
+            <tag>/li</tag>
+            <tag>li</tag>
+                15 digital images
+            <tag>/li</tag>
+            <tag>li</tag>
+                Photo release
+            <tag>/li</tag>
+            <tag>li</tag>
+                SD-card with Hi-res + <tag>strong</tag>$24.99<tag>/strong</tag>
+            <tag>/li</tag>
+        <tag>/ul</tag>
+    <tag>/div</tag>
+    <span class="chl-comment"> Price Item Footer </span>
+    <tag>div <attr>class="anita-price-item--footer"</attr></tag>
+        <tag>a <attr>href="#"</attr><attr>class="anita-price-item-button anita-button"</attr></tag>Explore Works<tag>/a</tag>
+    <tag>/div</tag>
+<tag>/div</tag></pre>
+                <!-- // CODE EXAMPLE -->
+
+<!-- ELEMENT: Column with Background Image -->
+                <h6>Column with Background Image</h6>
+                <!-- CODE EXAMPLE -->
+<pre class="chl chl-html">
+<span class="chl-comment"> Column with Background Image </span>
+<tag>div <attr>class="anita-data-background"</attr> <attr>data-src="img/page-services/service01.jpg"</attr></tag><tag>/div</tag></pre>
+                <!-- // CODE EXAMPLE -->
+                <p class="bottom-gap--m">This element is used to show the image on the side of the price table item. All you need is to specify the URL of the image in the <span class="chl-attr">data-src</span> attribute.</p>
+
+<!-- ELEMENT: Toggle Sections -->
+                <h6>Toggle Sections</h6>
+                <!-- CODE EXAMPLE -->
+<pre class="chl chl-html bottom-gap--m">
+<span class="chl-comment"> Toggle Sections </span>
+<tag>div <attr>class="anita-toggles-wrap"</attr></tag>
+    <span class="chl-comment"> Toggle Item 01 </span>
+    <tag>div <attr>class="anita-toggles-item"</attr></tag>
+        <tag>div <attr>class="anita-toggles-item--title"</attr></tag>
+            <tag>sup</tag>01.<tag>/sup</tag> Item Title
+        <tag>/div</tag>
+        <tag>div <attr>class="anita-toggles-item--content"</attr></tag>
+            <tag>p</tag>Item toggled content<tag>/p</tag>
+        <tag>/div</tag>
+    <tag>/div</tag>
+
+    <span class="chl-comment"> Toggle Item 02 </span>
+    ...
+<tag>/div</tag></pre>
+                <!-- // CODE EXAMPLE -->
+
+<!-- ELEMENT: Testimonials -->
+                <h6>Testimonials Grid</h6>
+                <!-- CODE EXAMPLE -->
+<pre class="chl chl-html bottom-gap--m">
+<span class="chl-comment"> Testimonials Grid </span>
+<tag>div <attr>class="anita-testimonials-grid anita-testimonials-3cols anita-masonry"</attr></tag>
+    <span class="chl-comment"> Testimonials Item 01 </span>
+    <tag>div <attr>class="anita-testimonials-item"</attr></tag>
+        <tag>div <attr>class="anita-testimonials-item_inner"</attr></tag>
+            <tag>div <attr>class="anita-testimonials-item__author"</attr></tag>
+                <tag>div <attr>class="anita-testimonials-item__author-image"</attr></tag>
+                    <tag>img <attr>src="img/avatars/testimonial01.jpg"</attr> <attr>alt="Customer Name"</attr></tag>
+                <tag>/div</tag>
+                <tag>div <attr>class="anita-testimonials-item__author-name"</attr></tag>
+                    <tag>h6</tag>
+                        Customer Name
+                    <tag>/h6</tag>
+                    <tag>span</tag>Occupation<tag>/span</tag>
+                <tag>/div</tag>
+            <tag>/div</tag>
+            <tag>div <attr>class="anita-testimonials-item__content"</attr></tag>
+                <tag>div <attr>class="anita-testimonials-item__stars anita-stars4"</attr></tag><tag>/div</tag>
+                <tag>p</tag>Customer review text goes here.<tag>/p</tag>
+            <tag>/div</tag>
+        <tag>/div</tag>
+    <tag>/div</tag>
+
+    <span class="chl-comment"> Testimonials Item 02 </span>
+    ...
+<tag>/div</tag></pre>
+                <!-- // CODE EXAMPLE -->
+                <p>In the parent tag <code class="chl chl-inline chl-html"><tag>div <attr>class="anita-testimonials-grid"</attr>/</tag></code> the class <span class="chl-attr-val">anita-masonry</span> is important to turn the grid into the masonry layout. The class <span class="chl-attr-val">anita-testimonials-3cols</span> set the columns number to show. You can use the following classes <span class="chl-attr-val">anita-testimonials-2cols</span>, <span class="chl-attr-val">anita-testimonials-3cols</span>, <span class="chl-attr-val">anita-testimonials-4cols</span>, and <span class="chl-attr-val">anita-testimonials-5cols</span>.</p>
+            </section>
+
+            <!-- Section: Next Chapter  -->
+            <section class="anita-section">
+                <div class="anita-cta" data-aos="fade-up">
+                    <h4>
+                        Next Chapter
+                    </h4>
+                    <div class="anita-caption">
+                        <a href="listing.html" class="anita-underline">Albums Listing</a>
+                    </div>
+                </div><!-- .anita-cta -->
+            </section>
+        </div>
+    </main>
+
+    <!-- Spotlight -->
+    <div class="anita-spotlight"></div>
+
+    <!-- JS Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../js/anita.js"></script>
+</body>

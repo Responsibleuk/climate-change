@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Page Title -->
+    <title>Anita | Creative Photography</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600;800&family=Rajdhani:wght@700&family=Roboto+Mono&display=swap" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="../css/config.css">
+    <link type="text/css" rel="stylesheet" href="../css/anita.css">
+
+    <!-- Favicon -->
+    <link rel="icon" href="../img/favicon.png" sizes="32x32" />
+</head>
+<body data-barba="wrapper">
+    <!-- Navigation -->
+    <div class="anita-navigation-wrap">
+        <nav class="anita-nav">
+            <ul class="anita-menu">
+                <li>
+                    <a href="../index.html"><sup>01</sup> Welcome</a>
+                </li>
+                <li>
+                    <a href="overview.html"><sup>02</sup> Overview</a>
+                </li>
+                <li>
+                    <a href="structure.html"><sup>03</sup> HTML Structure</a>
+                </li>
+                <li>
+                    <a href="header.html"><sup>04</sup> Header and Menu</a>
+                </li>
+                <li>
+                    <a href="footer.html"><sup>05</sup> Footer and Socials</a>
+                </li>
+                <li class="is-active">
+                    <a href="options.html"><sup>06</sup> Options and Settings</a>
+                </li>
+                <li>
+                    <a href="content.html"><sup>07</sup> Content and Grid</a>
+                </li>
+                <li>
+                    <a href="elements.html"><sup>08</sup> Content Elements</a>
+                </li>
+                <li>
+                    <a href="listing.html"><sup>09</sup> Albums Listing</a>
+                </li>
+                <li>
+                    <a href="albums.html"><sup>10</sup> Album Posts</a>
+                </li>
+                <li>
+                    <a href="contact.html"><sup>11</sup> Contact Form</a>
+                </li>
+                <li>
+                    <a href="customize.html"><sup>12</sup> Style Customization</a>
+                </li>
+                <li>
+                    <a href="credits.html"><sup>13</sup> Credits</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    
+    <main data-barba="container" data-barba-namespace="intro">
+        <!-- Content -->
+        <div class="anita-container">
+            
+            <!-- SECTION: Options and Settings -->
+            <section>
+                <div class="grid grid--33-66 bottom-gap--s">
+                    <div>
+                        <h2><sup>06.</sup> Options &amp; Settings</h2>
+                    </div>
+                    <div>
+                        In this section, we will take a look at all other options you can find in the template config inside the file <span class="anita-highlight">js/core.js</span>. With that, you can configure features to fit your needs.
+                    </div>
+                </div><!-- .grid -->
+
+<!-- CODE EXAMPLE -->
+<pre class="chl chl-css">
+<sel class="is-tag">const</sel> anita_config <sel class="is-tag">=</sel> {
+
+    ...
+
+    <span class="chl-comment"> --- Content Features --- </span>
+    <span class="chl-js-comment">// Page background Spotlight Effect</span>
+    <attr class="is-spec">spotlight</attr>: <span class="chl-css-attr-n">true</span>,
+
+    <span class="chl-js-comment">// Back to Top Button</span>
+    <attr class="is-spec">back2top</attr>: <span class="chl-css-attr-n">true</span>,
+
+    <span class="chl-js-comment">// Interractive Cursor/span>
+    <attr class="is-spec">int_cursor</attr>: <span class="chl-css-attr-n">true</span>,
+
+    <span class="chl-comment"> --- Protection Options --- </span>
+    <span class="chl-js-comment">// Right Click Protection</span>
+    <attr class="is-spec">disable_right_click</attr>: <span class="chl-css-attr-n">true</span>,
+
+    <span class="chl-js-comment">// Protect Images from Drag</span>
+    <attr class="is-spec">image_drag_protection</attr>: <span class="chl-css-attr-n">true</span>,
+
+    <span class="chl-comment"> --- Localization --- </span>
+    <attr class="is-spec">l10n</attr>: {
+        <span class="chl-js-comment">// Footer Copyright string</span>
+        <attr class="is-spec">copyright</attr> : <span class="chl-css-attr-n">'Copyright &copy; 2022. All Rights Reserved.'</span>,
+
+        <span class="chl-js-comment">// The message that appears when visitors try to open context menu</span>
+        <attr class="is-spec">rcp_message</attr> : <span class="chl-css-attr-n">'Context menu is not allowed on this website'</span>,
+
+        <span class="chl-js-comment">// The Button Label for Context Menu blocker</span>
+        <attr class="is-spec">rcp_button</attr> : <span class="chl-css-attr-n">'Got It!'</span>,
+
+        <span class="chl-js-comment">// Back to Top Label</span>
+        <attr class="is-spec">b2t_label</attr> : <span class="chl-css-attr-n">'Back to Top'</span>,
+    }
+}
+</pre>
+<!-- // CODE EXAMPLE -->
+            </section>
+
+            <!-- Section: Next Chapter  -->
+            <section class="anita-section">
+                <div class="anita-cta" data-aos="fade-up">
+                    <h4>
+                        Next Chapter
+                    </h4>
+                    <div class="anita-caption">
+                        <a href="content.html" class="anita-underline">Content and Grid</a>
+                    </div>
+                </div><!-- .anita-cta -->
+            </section>
+        </div>
+    </main>
+
+    <!-- Spotlight -->
+    <div class="anita-spotlight"></div>
+
+    <!-- JS Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../js/anita.js"></script>
+</body>

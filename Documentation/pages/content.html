@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Page Title -->
+    <title>Anita | Creative Photography</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600;800&family=Rajdhani:wght@700&family=Roboto+Mono&display=swap" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="../css/config.css">
+    <link type="text/css" rel="stylesheet" href="../css/anita.css">
+
+    <!-- Favicon -->
+    <link rel="icon" href="../img/favicon.png" sizes="32x32" />
+</head>
+<body data-barba="wrapper">
+    <!-- Navigation -->
+    <div class="anita-navigation-wrap">
+        <nav class="anita-nav">
+            <ul class="anita-menu">
+                <li>
+                    <a href="../index.html"><sup>01</sup> Welcome</a>
+                </li>
+                <li>
+                    <a href="overview.html"><sup>02</sup> Overview</a>
+                </li>
+                <li>
+                    <a href="structure.html"><sup>03</sup> HTML Structure</a>
+                </li>
+                <li>
+                    <a href="header.html"><sup>04</sup> Header and Menu</a>
+                </li>
+                <li>
+                    <a href="footer.html"><sup>05</sup> Footer and Socials</a>
+                </li>
+                <li>
+                    <a href="options.html"><sup>06</sup> Options and Settings</a>
+                </li>
+                <li class="is-active">
+                    <a href="content.html"><sup>07</sup> Content and Grid</a>
+                </li>
+                <li>
+                    <a href="elements.html"><sup>08</sup> Content Elements</a>
+                </li>
+                <li>
+                    <a href="listing.html"><sup>09</sup> Albums Listing</a>
+                </li>
+                <li>
+                    <a href="albums.html"><sup>10</sup> Album Posts</a>
+                </li>
+                <li>
+                    <a href="contact.html"><sup>11</sup> Contact Form</a>
+                </li>
+                <li>
+                    <a href="customize.html"><sup>12</sup> Style Customization</a>
+                </li>
+                <li>
+                    <a href="credits.html"><sup>13</sup> Credits</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    
+    <main data-barba="container" data-barba-namespace="intro">
+        <!-- Content -->
+        <div class="anita-container">
+            
+            <!-- SECTION: Content and Grid -->
+            <section>
+                <div class="grid grid--33-66 bottom-gap--s">
+                    <div>
+                        <h2><sup>07.</sup> Content &amp; Grid</h2>
+                    </div>
+                    <div>
+                        Now, when we have done with the header, footer, and basic configuration, we can take a look at the content part. All page content is placed inside <code class="chl chl-inline chl-html"><tag>main <attr>class="anita-main"</attr>/</tag></code>.
+                    </div>
+                </div><!-- .grid -->
+
+                <!-- // CODE EXAMPLE -->
+<pre class="chl chl-html bottom-gap--m">
+<span class="chl-comment"> Page Main </span>
+<tag>main <attr>class="anita-main"</attr></tag>
+    ...
+<tag>/main</tag></pre>
+                <!-- // CODE EXAMPLE -->
+                
+                <h6>Page Background</h6>
+                <p>The only exception is the page background used on some content pages. This block is placed before the <code class="chl chl-inline chl-html"><tag>main <attr>class="anita-main"</attr>/</tag></code> tag.</p>
+
+                <!-- // CODE EXAMPLE -->
+<pre class="chl chl-html">
+<span class="chl-comment"> Page Background </span>
+<tag>div <attr>class="anita-page-background-wrap"</attr></tag>
+    <tag>div <attr>class="anita-page-background"</attr> <attr>data-src="img/background/about.jpg"</attr> <attr>data-opacity="0.07"</attr></tag><tag>/div</tag>
+<tag>/div</tag>
+
+<span class="chl-comment"> Page Main </span>
+<tag>main <attr>class="anita-main"</attr></tag>
+    ...
+<tag>/main</tag></pre>
+                <!-- // CODE EXAMPLE -->
+
+                <p class="bottom-gap--m">In the attribute <span class="chl-attr">data-src</span>, you specify the URL to the image or the video file. If you use the video for the background, you also need to add the class <span class="chl-attr-val">is-video</span> to the <span class="chl-tag">div.<span class="chl-attr-val">anita-page-background</span></span>. And the attribute <span class="chl-attr">data-opacity</span> is used to specify the background opacity value, where <span class="anita-highlight">0</span> - is fully transparent and <span class="anita-highlight">1</span> is 100% opacity.</p>
+
+                <h6>Content Sections</h6>
+                <p>For the fullscreen gallery layouts, the content is placed right inside the <code class="chl chl-inline chl-html"><tag>main <attr>class="anita-main"</attr>/</tag></code> tag. More details about that, you can find in the <a href="listing.html">Albums Listing</a> and <a href="albums.html">Album Posts</a> chapters. But, here, we will consider the situation with simple content pages. So, here we will show you the basic markup for a regular content page.</p>
+
+                <!-- // CODE EXAMPLE -->
+<pre class="chl chl-html">
+<span class="chl-comment"> Page Main </span>
+<tag>main <attr>class="anita-main"</attr></tag>
+
+    <span class="chl-comment"> Page Container </span>
+    <tag>div <attr>class="anita-container"</attr></tag>
+
+        <tag>section <attr>class="anita-section"</attr></tag>
+            ...
+        <tag>/section</tag>
+
+        <tag>section <attr>class="anita-section"</attr></tag>
+            ...
+        <tag>/section</tag>
+
+    <tag>/div</tag>
+<tag>/main</tag></pre>
+                <!-- // CODE EXAMPLE -->
+
+                <p class="bottom-gap--m">All sections except the last one have a bottom spacing. If you need to use the section without bottom spacing, you can add the <span class="chl-attr-val">anita-section-no-spacing</span> class. Also, you can adjust the bottom spacing with the following classes: <span class="chl-attr-val">anita-bottom-gap--none</span>, <span class="chl-attr-val">anita-bottom-gap--small</span>, <span class="chl-attr-val">anita-bottom-gap--medium</span>, and <span class="chl-attr-val">anita-bottom-gap--large</span>. These classes apply not only to sections but to any blocks. By default, values for these spacings are <span class="anita-highlight">0px</span>, <span class="anita-highlight">40px</span>, <span class="anita-highlight">80px</span>, <span class="anita-highlight">120px</span>. To know how to adjust them on your own, look to the <a href="customize.html">Customization</a> section.</p>
+
+                <h6>Grid System</h6>
+                <p>Our template uses its own <span class="anita-highlight">Grid</span> system. The grid block starts with <code class="chl chl-inline chl-html"><tag>div <attr>class="anita-grid"</attr></tag>...<tag>/div</tag></code>, and with the additional classes, you can specify columns pattern for the grid. Also, you can twice reduce the gap of the grid with the class <span class="chl-attr-val">anita-grid-small-gap</span>.</p>
+                
+                <div class="grid grid--40-60 grid-showcase">
+                    <div class="grid-code">
+<pre class="chl chl-html">
+<tag>div <attr>class="anita-grid anita-grid--2cols"</attr></tag>
+    ...
+<tag>/div</tag>
+</pre>
+                    </div>
+                    <div class="grid-example-wrap">
+                        <span class="anita-highlight">Result:</span>
+                        <div class="grid grid--2cols grid-example grid-small-gap">
+                            <div>Column 01</div>
+                            <div>Column 02</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid grid--40-60 grid-showcase">
+                    <div class="grid-code">
+<pre class="chl chl-html">
+<tag>div <attr>class="anita-grid anita-grid--3cols"</attr></tag>
+    ...
+<tag>/div</tag>
+</pre>
+                    </div>
+                    <div class="grid-example-wrap">
+                        <span class="anita-highlight">Result:</span>
+                        <div class="grid grid--3cols grid-example grid-small-gap">
+                            <div>Column 01</div>
+                            <div>Column 02</div>
+                            <div>Column 03</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid grid--40-60 grid-showcase">
+                    <div class="grid-code">
+<pre class="chl chl-html">
+<tag>div <attr>class="anita-grid anita-grid--4cols"</attr></tag>
+    ...
+<tag>/div</tag>
+</pre>
+                    </div>
+                    <div class="grid-example-wrap">
+                        <span class="anita-highlight">Result:</span>
+                        <div class="grid grid--4cols grid-example grid-small-gap">
+                            <div>Column 01</div>
+                            <div>Column 02</div>
+                            <div>Column 03</div>
+                            <div>Column 04</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid grid--40-60 grid-showcase">
+                    <div class="grid-code">
+<pre class="chl chl-html">
+<tag>div <attr>class="anita-grid anita-grid--33-66"</attr></tag>
+    ...
+<tag>/div</tag>
+</pre>
+                    </div>
+                    <div class="grid-example-wrap">
+                        <span class="anita-highlight">Result:</span>
+                        <div class="grid grid--33-66 grid-example grid-small-gap">
+                            <div>Column 1/3</div>
+                            <div>Column 2/3</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid grid--40-60 grid-showcase bottom-gap--m">
+                    <div class="grid-code">
+<pre class="chl chl-html">
+<tag>div <attr>class="anita-grid anita-grid--66-33"</attr></tag>
+    ...
+<tag>/div</tag>
+</pre>
+                    </div>
+                    <div class="grid-example-wrap">
+                        <span class="anita-highlight">Result:</span>
+                        <div class="grid grid--66-33 grid-example grid-small-gap">
+                            <div>Column 2/3</div>
+                            <div>Column 1/3</div>
+                        </div>
+                    </div>
+                </div>
+
+                <h6>Offsets</h6>
+                <p>Also, you can use offsets for blocks where you want to add some side spacing.</p>
+                <div class="grid grid--2cols bottom-gap--m">
+                    <div>
+<pre class="chl chl-html">
+<tag>div <attr>class="anita-offset-left--25"</attr></tag>
+    <span class="chl-comment"> Adds 25% spacing on the left. </span>
+<tag>/div</tag>
+</pre>
+<pre class="chl chl-html">
+<tag>div <attr>class="anita-offset-left--33"</attr></tag>
+    <span class="chl-comment"> Adds 33% spacing on the left. </span>
+<tag>/div</tag>
+</pre>
+<pre class="chl chl-html">
+<tag>div <attr>class="anita-offset-left--50"</attr></tag>
+    <span class="chl-comment"> Adds 50% spacing on the left. </span>
+<tag>/div</tag>
+</pre>
+<pre class="chl chl-html">
+<tag>div <attr>class="anita-offset-left--66"</attr></tag>
+    <span class="chl-comment"> Adds 66% spacing on the left. </span>
+<tag>/div</tag>
+</pre>
+                    </div>
+                    <div>
+<pre class="chl chl-html">
+<tag>div <attr>class="anita-offset-right--25"</attr></tag>
+    <span class="chl-comment"> Adds 25% spacing on the right. </span>
+<tag>/div</tag>
+</pre>
+<pre class="chl chl-html">
+<tag>div <attr>class="anita-offset-right--33"</attr></tag>
+    <span class="chl-comment"> Adds 33% spacing on the right. </span>
+<tag>/div</tag>
+</pre>
+<pre class="chl chl-html">
+<tag>div <attr>class="anita-offset-right--50"</attr></tag>
+    <span class="chl-comment"> Adds 50% spacing on the right. </span>
+<tag>/div</tag>
+</pre>
+<pre class="chl chl-html">
+<tag>div <attr>class="anita-offset-right--66"</attr></tag>
+    <span class="chl-comment"> Adds 66% spacing on the right. </span>
+<tag>/div</tag>
+</pre>
+                    </div>
+                </div>
+
+                <h6>Alignment</h6>
+                <p>And one more useful thing. You can adjust inner alignment using the following classes:</p>
+                <div class="grid grid--3cols bottom-gap--m">
+                    <div>
+<pre class="chl chl-html">
+<tag>div <attr>class="align-left"</attr></tag>
+<div class="align-left chl-comment"> Left Alignment </div><tag>/div</tag>
+</pre>
+                    </div>
+                    <div>
+<pre class="chl chl-html">
+<tag>div <attr>class="align-center"</attr></tag>
+<div class="align-center chl-comment"> Center Alignment </div><tag>/div</tag>
+</pre>
+                    </div>
+                    <div>
+<pre class="chl chl-html">
+<tag>div <attr>class="align-right"</attr></tag>
+<div class="align-right chl-comment"> Right Alignment </div><tag>/div</tag>
+</pre>
+                    </div>
+                </div>
+
+                <h6>Responsive Classes</h6>
+                <p>For tablets, our template has custom classes to define the number of grid columns and offset options. When you add one (or more) of these classes, you will see the result when the screen resolution is less than 960 pixels wide. To change the number of grid columns for tablet screen size, you can use the following classes: <span class="chl-attr-val">anita-grid--tablet-1col</span>, <span class="chl-attr-val">anita-grid--tablet-2col</span>, and <span class="chl-attr-val">anita-grid--tablet-3col</span>.</p>
+                <p>As for offset options, here's a table of useful classes:</p>
+                <div class="grid grid--2cols">
+                    <div>
+<pre class="chl chl-html">
+<tag>div <attr>class="anita-offset--tablet-left--25"</attr></tag>
+    <span class="chl-comment"> Adds 25% spacing on the left for Tablet. </span>
+<tag>/div</tag>
+</pre>
+<pre class="chl chl-html">
+<tag>div <attr>class="anita-offset--tablet-left--33"</attr></tag>
+    <span class="chl-comment"> Adds 33% spacing on the left for Tablet. </span>
+<tag>/div</tag>
+</pre>
+<pre class="chl chl-html">
+<tag>div <attr>class="anita-offset--tablet-left--50"</attr></tag>
+    <span class="chl-comment"> Adds 50% spacing on the left for Tablet. </span>
+<tag>/div</tag>
+</pre>
+<pre class="chl chl-html">
+<tag>div <attr>class="anita-offset--tablet-left--66"</attr></tag>
+    <span class="chl-comment"> Adds 66% spacing on the left for Tablet. </span>
+<tag>/div</tag>
+</pre>
+                    </div>
+                    <div>
+<pre class="chl chl-html">
+<tag>div <attr>class="anita-offset--tablet-right--25"</attr></tag>
+    <span class="chl-comment"> Adds 25% spacing on the right for Tablet. </span>
+<tag>/div</tag>
+</pre>
+<pre class="chl chl-html">
+<tag>div <attr>class="anita-offset--tablet-right--33"</attr></tag>
+    <span class="chl-comment"> Adds 33% spacing on the right for Tablet. </span>
+<tag>/div</tag>
+</pre>
+<pre class="chl chl-html">
+<tag>div <attr>class="anita-offset--tablet-right--50"</attr></tag>
+    <span class="chl-comment"> Adds 50% spacing on the right for Tablet. </span>
+<tag>/div</tag>
+</pre>
+<pre class="chl chl-html">
+<tag>div <attr>class="anita-offset--tablet-right--66"</attr></tag>
+    <span class="chl-comment"> Adds 66% spacing on the right for Tablet. </span>
+<tag>/div</tag>
+</pre>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section: Next Chapter  -->
+            <section class="anita-section">
+                <div class="anita-cta" data-aos="fade-up">
+                    <h4>
+                        Next Chapter
+                    </h4>
+                    <div class="anita-caption">
+                        <a href="elements.html" class="anita-underline">Content Elements</a>
+                    </div>
+                </div><!-- .anita-cta -->
+            </section>
+        </div>
+    </main>
+
+    <!-- Spotlight -->
+    <div class="anita-spotlight"></div>
+
+    <!-- JS Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../js/anita.js"></script>
+</body>
